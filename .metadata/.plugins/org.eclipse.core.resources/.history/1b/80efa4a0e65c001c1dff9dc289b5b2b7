@@ -13,7 +13,5 @@ public class Z02 {
 		double sirina = Double.parseDouble(JOptionPane.showInputDialog("Upiši širinu prostorije"));
 		
 		double kvadratura = duzina * sirina;
-		
-		System.out.println(kvadratura);
 	}
 }
