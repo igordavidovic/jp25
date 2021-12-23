@@ -29,5 +29,6 @@ public class Zadatak1 {
 		System.out.println(i);
 		break;
 		}
+		
 	}
 }
