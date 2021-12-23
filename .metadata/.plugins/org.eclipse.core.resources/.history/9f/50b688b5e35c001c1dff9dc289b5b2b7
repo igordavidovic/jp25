@@ -1,8 +1,0 @@
-package edunova;
-
-import javax.swing.JOptionPane;
-
-	// Program učitava Dužinu i širinu prostoriju
-	// Program ispisuje kvadraturu prostorije
-
-}
