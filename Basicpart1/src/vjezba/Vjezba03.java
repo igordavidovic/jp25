@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
 public class Vjezba03 {
 	public static void main(String[] args) {
 		//#81
-	/*	int[] niz = new int [3];
+		int[] niz = new int [3];
 		
 		for(int i = 0;i<niz.length;i++) {
 			niz[i] = Integer.parseInt(JOptionPane.showInputDialog("Upiši broj"));
@@ -19,10 +19,10 @@ public class Vjezba03 {
 		swniz[2] = niz[0];
 		
 		System.out.println(Arrays.toString(niz));
-		System.out.println(Arrays.toString(swniz));*/
+		System.out.println(Arrays.toString(swniz));
 		
 		//#82
-	/*	int[] niz2 = new int [5];
+		int[] niz2 = new int [5];
 		for(int i = 0;i<niz2.length;i++) {
 			niz2[i] = Integer.parseInt(JOptionPane.showInputDialog("Upiši broj"));
 		}
@@ -37,11 +37,11 @@ public class Vjezba03 {
 			System.out.println(niz2[3]);
 		}else {
 			System.out.println(niz2[4]);
-		}*/
+		}
 		
 		//#83
 		
-	/*	int[] niz3 = new int [4];
+		int[] niz3 = new int [4];
 		int[] niz4 = new int [4];
 		
 		for(int i = 0;i < niz3.length;i++) {
@@ -51,10 +51,10 @@ public class Vjezba03 {
 			niz4[i] = Integer.parseInt(JOptionPane.showInputDialog("Upiši broj"));
 		}
 		System.out.println("Rezultati" + " = " + niz3[0] * niz4[0] + " " + niz3[1] * niz4[1] + " " + niz3[2] * niz4[2] + " " + niz3[3] * niz4[3] );
-		*/
+		
 		
 		//#86
-	/*	int n = Integer.parseInt(JOptionPane.showInputDialog("Upiši broj"));
+		int n = Integer.parseInt(JOptionPane.showInputDialog("Upiši broj"));
 		vanjska0:
 		while(n != 1) {
 			if(n == 0) {
@@ -68,10 +68,10 @@ public class Vjezba03 {
 			}
 			System.out.println(n);
 		}
-		*/
+		
 		
 		//#92
-	/*	int a = Integer.parseInt(JOptionPane.showInputDialog("Upiši koliko će niz biti dug"));
+		int a = Integer.parseInt(JOptionPane.showInputDialog("Upiši koliko će niz biti dug"));
 		int[] niz5 = new int [a];
 		int parni = 0;
 		int neparni = 0;
@@ -86,10 +86,10 @@ public class Vjezba03 {
 			}
 		}
 		System.out.println("Broj parnih brojeva je : " + parni);
-		System.out.println("Broj neparnih brojeva je : " + neparni);*/
+		System.out.println("Broj neparnih brojeva je : " + neparni);
 		
 		//#93
-	/*	int b = Integer.parseInt(JOptionPane.showInputDialog("Upiši koliko će niz biti dug"));
+		int b = Integer.parseInt(JOptionPane.showInputDialog("Upiši koliko će niz biti dug"));
 		
 		int[] niz6 = new int [b];
 		boolean prv1 = false;
@@ -110,10 +110,10 @@ public class Vjezba03 {
 			System.out.println("Broj 10 se nalazi jedan pokraj drugoga u nizu: " + prv1);
 			System.out.println("Broj 20 se nalazi jedan pokraj drugoga u nizu: " + prv2);
 		}
-		*/
+		
 		
 		//#94
-	/*	int c = Integer.parseInt(JOptionPane.showInputDialog("Upiši koliko dug će biti niz"));
+		int c = Integer.parseInt(JOptionPane.showInputDialog("Upiši koliko dug će biti niz"));
 		int[] niz7 = new int [c];
 		int[] niz8 = new int [c];
 		int d = 0;
@@ -134,10 +134,10 @@ public class Vjezba03 {
 			}
 		}
 		System.out.println(Arrays.toString(niz7));
-		System.out.println(Arrays.toString(niz8));*/
+		System.out.println(Arrays.toString(niz8));
 		
 		//#96
-	/*	int cc = Integer.parseInt(JOptionPane.showInputDialog("Upiši koliko dug će biti niz"));
+		int cc = Integer.parseInt(JOptionPane.showInputDialog("Upiši koliko dug će biti niz"));
 		int brojac = 0;
 		int[] niz9 = new int [cc];
 		boolean prv3 = false;
@@ -165,7 +165,7 @@ public class Vjezba03 {
 		}else {
 			System.out.println("False");
 		}
-		*/
+		
 		
 		//#97
 		int ccc = Integer.parseInt(JOptionPane.showInputDialog("Upiši koliko dug će biti niz"));
@@ -183,6 +183,9 @@ public class Vjezba03 {
 			}
 		}
 		System.out.println(prv5);
+		
+	
+		
 	}
 }
 
