@@ -6,21 +6,21 @@ import javax.swing.JOptionPane;
 
 public class Tablica {
 	public static void main(String[] args) {
-		int redak = Integer.parseInt(JOptionPane.showInputDialog("Upiši broj redaka koji će biti u tablici"));
+		int rijedak = Integer.parseInt(JOptionPane.showInputDialog("Upiši broj redaka koji će biti u tablici"));
 		int stupac = Integer.parseInt(JOptionPane.showInputDialog("Upiši broj stupaca koji će biti u tablici"));
-		int[][] niz = new int [redak][stupac];
+		int[][] niz = new int [rijedak][stupac];
 		int d = 1;
-		int proizvod = redak * stupac;
+		int proizvod = rijedak * stupac;
 		vanjska:
-		for(int i = 0;i < redak;i++) {
+		for(int i = 0;i < rijedak;i++) {
 		for(int y = stupac - (1+i) ; y >= (0+i);y--) {
 			if(d > proizvod) {
 			break vanjska;
 			}	
-			niz[redak - (1+i)][y] = d;
+			niz[rijedak - (1+i)][y] = d;
 			d++;			
 				}
-		for(int x = redak - (2+i);x > (0+i);x--) {
+		for(int x = rijedak - (2+i);x > (0+i);x--) {
 			if(d > proizvod) {
 				break vanjska;
 			}		
@@ -35,7 +35,7 @@ public class Tablica {
 				niz[(0+i)][y] = d;
 				d++;
 		}
-		for(int x = (1+i);x < redak - (1+i) ;x++) {
+		for(int x = (1+i);x < rijedak - (1+i) ;x++) {
 			if(d > proizvod) {
 				break vanjska;
 			}	
@@ -43,9 +43,16 @@ public class Tablica {
 				d++;
 		}
 	}
-
-		for(int i = 0; i < redak;i++){
+		//trebam probati formatirati ispis
+		for(int i = 0; i < rijedak;i++){
 			System.out.println(Arrays.toString(niz[i]));
 		}
+	
+	/*	for(int x = 0;x < rijedak;x++) {
+			for(int y = 0;y<stupac;y++) {
+				System.out.print(String.format("%4d", niz[x][y]));
+			}
+			System.out.println();
+		}*/
 	}
 }
