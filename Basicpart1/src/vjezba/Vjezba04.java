@@ -1,5 +1,7 @@
 package vjezba;
 
+import java.util.Arrays;
+
 import javax.swing.JOptionPane;
 
 public class Vjezba04 {
@@ -90,10 +92,37 @@ public class Vjezba04 {
 			System.out.println("Broj 20 se pojavljuje : " + suma3 + " puta");
 		}*/
 		//#102
-		int broj3 = Integer.parseInt(JOptionPane.showInputDialog("Upiši koliko će brojeva biti u nizu"));
+	/*	int broj3 = Integer.parseInt(JOptionPane.showInputDialog("Upiši koliko će brojeva biti u nizu"));
 		int[] niz3 = new int [broj3];
+		boolean prv1 = false;
 		for(int i = 0;i < niz3.length;i++) {
 			niz3[i] = Integer.parseInt(JOptionPane.showInputDialog("Upiši broj"));
+			if(niz3[i] == 10 || niz3[i] ==30) {
+				prv1 = true;
 			}
+			}
+		System.out.println(prv1);*/
+		//#103
+		int broj4 = Integer.parseInt(JOptionPane.showInputDialog("Upiši koliko će brojeva biti u nizu"));
+		int[] niz4 = new int [broj4];
+		int d = 1;
+		for(int i = 0;i < niz4.length;i++) {
+			niz4[i] = Integer.parseInt(JOptionPane.showInputDialog("Upiši broj"));
+		}
+		vanjska2:
+		for(int i = 0;i < niz4.length;i++) {
+			if(niz4[i] != 10) {
+				d++;
+			}else {
+				break vanjska2;
+			}
+		}
+		int a = broj4 - d;
+		int[] niz5 = new int [a];
+		for(int i = 0;i < niz5.length;i++) {
+			niz5[i] = niz4[d];
+			d++;
+		}
+		System.out.println(Arrays.toString(niz5));
 	}
 }
