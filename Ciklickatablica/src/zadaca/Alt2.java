@@ -43,15 +43,10 @@ public class Alt2 {
 				d++;
 		}
 	}
-	/*	for(int i = 0; i < rijedak;i++){
+		for(int i = 0; i < rijedak;i++){
 			System.out.println(Arrays.toString(niz[i]));
-		}*/
-	
-		for(int x = 0;x < rijedak;x++) {
-			for(int y = 0;y<stupac;y++) {
-				System.out.print(String.format("%4d", niz[x][y]));
-			}
-			System.out.println();
 		}
+	
+		
 	}
 }
