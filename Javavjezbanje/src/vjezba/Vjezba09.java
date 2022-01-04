@@ -6,7 +6,7 @@ import javax.swing.JOptionPane;
 
 public class Vjezba09 {
 	public static void main(String[] args) {
-	/*	int broj;
+		int broj;
 		int suma = 0;
 		while(true) {
 			broj = Integer.parseInt(JOptionPane.showInputDialog("Upiši broj"));
@@ -27,10 +27,10 @@ public class Vjezba09 {
 			}
 			System.out.println("Broj prim brojeva koji su manji od " + broj + " ili jednaki sa " + broj +  " je " + suma);
 			break;
-		}*/
+		}
 		
 		//#221
-	/*	int[] niz = new int[6];
+		int[] niz = new int[6];
 		vanjska:
 		while(true) {
 			for(int i = 0;i < niz.length;i++) {
@@ -53,10 +53,10 @@ public class Vjezba09 {
 				System.out.print(niz[i] + " ");
 			}
 			break vanjska;
-		}*/
+		}
 		
 		//#226
-	/*	int broj1;
+		int broj1;
 		vanjska1:
 		while(true) {
 			broj1 = Integer.parseInt(JOptionPane.showInputDialog("Upiši broj int koji će se unositi"));
@@ -101,6 +101,41 @@ public class Vjezba09 {
 			System.out.println(Arrays.toString(niz3));
 			break vanjska1;
 		}
-		*/
+		
+		//#231
+		int[] niz5 = new int[8];
+		int[] niz6 = new int[8];
+		int[] niz7 = new int[8];
+		int[] niz8 = new int[8];
+		
+		for(int i = 0;i < niz5.length;i++) {
+			niz5[i] = Integer.parseInt(JOptionPane.showInputDialog("Upiši broj između 0 i 9"));
+			niz6[i] = niz5[i];
+			niz7[i] = niz5[i];
+		}
+		for(int i = 0;i < niz6.length;i++) {
+			for(int j = 0;j < niz6.length;j++) {
+				if(niz6[i] > niz6[j]) {
+					int temp = niz6[i];
+					niz6[i] = niz6[j];
+					niz6[j] = temp;
+				}
+				if(niz7[i] < niz7[j]) {
+					int temp1 = niz7[i];
+					niz7[i] = niz7[j];
+					niz7[j] = temp1;
+				}
+			}
+		}
+		for(int i = niz5.length -1 ;i >= 0;i--) {
+			if((niz6[i] - niz7[i]) < 0) {
+				niz6[i] += 10;
+				niz7[i - 1] += 1;
+			}
+			niz8[i] = niz6[i] - niz7[i];
+		}
+		System.out.println(Arrays.toString(niz6));
+		System.out.println(Arrays.toString(niz7));
+		System.out.println(Arrays.toString(niz8));
 	}
 }
