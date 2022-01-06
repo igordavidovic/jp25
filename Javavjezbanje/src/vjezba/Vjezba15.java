@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
 public class Vjezba15 {
 	public static void main(String[] args) {
 		//#17
-	/*	int [] niz = {1,3,5,0,73,42,5,6,86,865,45,234,123,534,546,765,78,0,1,2,3,5,5,2,4};
+		int [] niz = {1,3,5,0,73,42,5,6,86,865,45,234,123,534,546,765,78,0,1,2,3,5,5,2,4};
 		for(int i = 0;i < niz.length;i++) {
 			for(int j = 0;j < niz.length;j++) {
 				if(niz[i] < niz[j]) {
@@ -22,9 +22,9 @@ public class Vjezba15 {
 			br++;
 		}
 		System.out.println((niz[niz.length-br]));
-		*/
+		
 		//#18
-	/*	int[] niz2 = {-1, 4, 0, 2, 7, -3,-3};
+		int[] niz2 = {-1, 4, 0, 2, 7, -3,-3};
 		for(int i = 0;i < niz2.length;i++) {
 			for(int j = 0;j < niz2.length;j++) {
 				if(niz2[i] < niz2[j]) {
@@ -38,9 +38,9 @@ public class Vjezba15 {
 		while(niz2[br1] == niz2[0]) {
 			br1++;
 		}
-		System.out.println(niz2[br1]);*/
+		System.out.println(niz2[br1]);
 		//#19
-	/*	int broj = Integer.parseInt(JOptionPane.showInputDialog("Upiši broj rijedaka"));
+		int broj = Integer.parseInt(JOptionPane.showInputDialog("Upiši broj rijedaka"));
 		int broj1 = Integer.parseInt(JOptionPane.showInputDialog("Upiši broj stupaca"));
 		
 		int[][] niz3 = new int[broj][broj1];
@@ -60,10 +60,10 @@ public class Vjezba15 {
 			for(int j = 0;j < broj1;j++) {
 				System.out.println(niz3[i][j] + niz4[i][j]);
 			}
-		}*/
+		}
 		
 		//#22
-	/*	int[] niz5 = {2, 7, 4, -5, 11, 5, 20};
+		int[] niz5 = {2, 7, 4, -5, 11, 5, 20};
 		int sn = Integer.parseInt(JOptionPane.showInputDialog("Upiši broj koji se traži"));
 		for(int i = 0;i < niz5.length;i++) {
 			for(int j = i + 1;j < niz5.length;j++) {
@@ -71,9 +71,9 @@ public class Vjezba15 {
 					System.out.println(niz5[i] + " + " + niz5[j] + " = " + sn);
 				}
 			}
-		}*/
+		}
 		//#23
-	/*	int[] niz6 = {2, 7, 4, -5, 11, 5, 20};
+		int[] niz6 = {2, 7, 4, -5, 11, 5, 20};
 		int[] niz7 = {2, 7, 4, -5, 11, 5,3};
 		int prov = 0;
 		for(int i = 0;i < niz6.length;i++) {
@@ -85,10 +85,10 @@ public class Vjezba15 {
 			System.out.println("Nizovi su jednaki");
 		}else {
 			System.out.println("Nizovi nisu jednaki");
-		}*/
+		}
 		
 		//#24
-		/*int[] niz8 = {1,2,4,3,5,7,8,9,10};
+		int[] niz8 = {1,2,4,3,5,7,8,9,10};
 		for(int i = 0;i < niz8.length;i++) {
 			for(int j = 0;j<niz8.length;j++) {
 				if(niz8[i] < niz8[j]) {
@@ -103,9 +103,9 @@ public class Vjezba15 {
 				System.out.println(niz8[i-1] + 1);
 				break;
 			}
-		}*/
+		}
 		//#25
-	/*	int[] niz9 = {2, 4, 8,14,40,45};
+		int[] niz9 = {2, 4, 8,14,40,45};
 		int[] niz10 = {2, 3, 4, 8, 10, 16,45};
 		int[] niz11 = {4, 8, 14, 40,45};
 		
@@ -125,9 +125,9 @@ public class Vjezba15 {
 			}else {
 				c++;
 			}
-		}*/
+		}
 		//#26
-	/*	int[] niz12 = {0,0,1,0,3,0,5,0,6,8,7,0,0,2};
+		int[] niz12 = {0,0,1,0,3,0,5,0,6,8,7,0,0,2};
 		int d = 0;
 		for(int i = 0;i < niz12.length;i++) {
 			for(int j = 0;j < niz12.length;j++) {
@@ -138,7 +138,7 @@ public class Vjezba15 {
 				}
 			}
 		}
-		System.out.println(Arrays.toString(niz12));*/
+		System.out.println(Arrays.toString(niz12));
 		//#27
 		int broj2 = Integer.parseInt(JOptionPane.showInputDialog("Upiši duljinu niza"));
 		int [] niz13 = new int[broj2];
@@ -154,5 +154,7 @@ public class Vjezba15 {
 			}
 		}
 		System.out.println("Broj parnih je : " + sumap + "\n" + "Broj neparnih je : " + suman);
+		
+		
 	}
 }
