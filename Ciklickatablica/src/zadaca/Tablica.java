@@ -6,11 +6,20 @@ import javax.swing.JOptionPane;
 
 public class Tablica {
 	public static void main(String[] args) {
-		int rijedak = Integer.parseInt(JOptionPane.showInputDialog("Upiši broj redaka koji će biti u tablici"));
-		int stupac = Integer.parseInt(JOptionPane.showInputDialog("Upiši broj stupaca koji će biti u tablici"));
-		int[][] niz = new int [rijedak][stupac];
-		int d = 1;
-		int proizvod = rijedak * stupac;
+		int rijedak; 
+		int stupac; 
+		int d;
+		int proizvod;
+		while(true) {
+			rijedak = Integer.parseInt(JOptionPane.showInputDialog("Upiši broj rijedaka koji će biti u tablici"));
+			stupac = Integer.parseInt(JOptionPane.showInputDialog("Upiši broj stupaca koji će biti u tablici"));
+			if(rijedak <= 0 || stupac <= 0) {
+				JOptionPane.showMessageDialog(null, "Brojevi nisu ispravni");
+				continue;
+			}
+			int[][] niz = new int [rijedak][stupac];
+			proizvod = rijedak * stupac;
+			d = 1;
 		vanjska:
 		for(int i = 0;i < rijedak;i++) {
 		for(int y = stupac - (1+i) ; y >= (0+i);y--) {
@@ -43,16 +52,10 @@ public class Tablica {
 				d++;
 		}
 	}
-		//trebam probati formatirati ispis
 		for(int i = 0; i < rijedak;i++){
 			System.out.println(Arrays.toString(niz[i]));
 		}
-	
-	/*	for(int x = 0;x < rijedak;x++) {
-			for(int y = 0;y<stupac;y++) {
-				System.out.print(String.format("%4d", niz[x][y]));
-			}
-			System.out.println();
-		}*/
+		break;
+		}
 	}
 }
