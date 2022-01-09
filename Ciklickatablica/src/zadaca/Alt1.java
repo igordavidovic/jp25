@@ -6,40 +6,41 @@ import javax.swing.JOptionPane;
 
 public class Alt1 {
 	public static void main(String[] args) {
-		int rijedak = Integer.parseInt(JOptionPane.showInputDialog("Upiši broj redaka koji će biti u tablici"));
+		//Iz donjeg lijevog kuta u smjeru kazaljke na satu
+		int rijedak = Integer.parseInt(JOptionPane.showInputDialog("Upiši broj rijedaka koji će biti u tablici"));
 		int stupac = Integer.parseInt(JOptionPane.showInputDialog("Upiši broj stupaca koji će biti u tablici"));
 		int[][] niz = new int [rijedak][stupac];
 		int d = 1;
 		int proizvod = rijedak * stupac;
 		vanjska:
 		for(int i = 0;i < rijedak;i++) {
-		for(int y = (0+i) ; y <= stupac - (1+i);y++) {
+		for(int x = rijedak - (1+i) ; x >= (0+i);x--) {
 			if(d > proizvod) {
 			break vanjska;
 			}	
-			niz[rijedak - (1+i)][y] = d;
+			niz[x][(0+i)] = d;
 			d++;			
 				}
-		for(int x = rijedak - (2+i);x > (0+i);x--) {
-			if(d > proizvod) {
-				break vanjska;
-			}		
-				niz[x][stupac - (1+i)] = d;
-				d++;
-			}
-		
-		for(int y = stupac - (1+i);y > (0 + i);y--) {
+		for(int y = (1+i);y < stupac - (1 + i);y++) {
 			if(d > proizvod) {
 				break vanjska;
 			}		
 				niz[(0+i)][y] = d;
 				d++;
+			}
+		
+		for(int x = (0+i);x < rijedak - (1+i);x++) {
+			if(d > proizvod) {
+				break vanjska;
+			}		
+				niz[x][stupac - (1+i)] = d;
+				d++;
 		}
-		for(int x = (0+i);x < rijedak - (1+i) ;x++) {
+		for(int y = stupac - (1+i);y > (0+i);y--) {
 			if(d > proizvod) {
 				break vanjska;
 			}	
-				niz[x][0+i] = d;
+				niz[rijedak - (1+i)][y] = d;
 				d++;
 		}
 	}
