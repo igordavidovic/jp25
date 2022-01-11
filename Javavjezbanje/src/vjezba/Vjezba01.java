@@ -37,7 +37,7 @@ public class Vjezba01 {
 		System.out.println(j / k);
 		System.out.println(j % k);
 
-		// #7
+		// #7 Tablica množenja
 
 		int t = Integer.parseInt(JOptionPane.showInputDialog("Unesi broj"));
 
@@ -45,7 +45,7 @@ public class Vjezba01 {
 			System.out.println(t + " * " + i + " = " + (t * i));
 		}
 
-		// #11
+		// #11 
 
 		double radius = 7.5;
 		double area = 2 * 3.14 * radius;
@@ -64,7 +64,7 @@ public class Vjezba01 {
 
 		System.out.println(zbroj / 3);
 
-		// #15
+		// #15 - Izmjenjuje dve varijable
 
 		int a = 10;
 		int b = 15;
@@ -76,7 +76,7 @@ public class Vjezba01 {
 		b = swap;
 		System.out.println("a " + "je " + a + " b " + "je " + b);
 
-		// #32
+		// #32 - Uspoređuje dva broja
 
 		int broj4 = Integer.parseInt(JOptionPane.showInputDialog("Upiši broj"));
 		int broj5 = Integer.parseInt(JOptionPane.showInputDialog("Upiši broj"));
@@ -94,7 +94,7 @@ public class Vjezba01 {
 			System.out.println(broj4 + " > " + broj5);
 		}
 
-		// #33
+		// #33 - Zbroj znamenki broja
 		int suma = 0;
 		int broj6 = Integer.parseInt(JOptionPane.showInputDialog("Upiši broj"));
 
@@ -104,7 +104,7 @@ public class Vjezba01 {
 		}
 		System.out.println(suma);
 
-		// #39
+		// #39 - Kolicina brojeva sa znamenkama 1 do 4
 		int kolicina = 0;
 		for (int i = 1; i <= 4; i++) {
 			for (int z = 1; z <= 4; z++) {
@@ -119,12 +119,12 @@ public class Vjezba01 {
 		}
 		System.out.println(kolicina);
 
-		// #44
+		// #44 
 		int br = Integer.parseInt(JOptionPane.showInputDialog("Upiši broj"));
 
 		System.out.println(br + " + " + br + "" + br + " + " + br + "" + br + "" + br);
 
-		// #48
+		// #48 - Ispisuje neparne brojeve do 100
 		for (int i = 1; i < 100; i++) {
 			if (i % 2 == 0) {
 				continue;
@@ -132,7 +132,7 @@ public class Vjezba01 {
 			System.out.println(i);
 		}
 
-		// #49
+		// #49 - Provjerava jeli broj paran ili neparan
 
 		int parnepar = Integer.parseInt(JOptionPane.showInputDialog("Upiši broj"));
 
@@ -142,7 +142,7 @@ public class Vjezba01 {
 			System.out.println("0");
 		}
 
-		// #50
+		// #50 - Ispisuje brojeve koji su djeljivi sa 3 , 5 ili 3 i 5
 		System.out.println("Djeljivi sa 3 :");
 		for (int i = 1; i < 100; i++) {
 			if (i % 3 == 0) {

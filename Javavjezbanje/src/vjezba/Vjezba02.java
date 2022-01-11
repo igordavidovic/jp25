@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
 
 public class Vjezba02 {
 	public static void main(String[] args) {
-		// #52
+		// #52 - Provjerava jeli suma prva dva broja veća od trećeg broja
 		int[] niz = new int [3];
 		
 		for(int i = 0;i < niz.length;i++) {
@@ -18,7 +18,7 @@ public class Vjezba02 {
 			}
 	
 		
-		//#53
+		//#53 
 		
 		int [] niz1 = new int [3];
 		
