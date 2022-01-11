@@ -14,6 +14,9 @@ public class Zadatak3 {
 	// 5. Jedan slučajno odabran uneseni broj
 
 	public static void main(String[] args) {
+		int suma = 0;
+		int max = Integer.MIN_VALUE;
+		int min = Integer.MAX_VALUE;
 		int slucajniBroj=0;
 		while(slucajniBroj==0) {
 			slucajniBroj = (int) (Math.random() * 10);
@@ -30,13 +33,24 @@ public class Zadatak3 {
 			if (b < 0) {
 				continue;
 			}
-			
+			if(b > max) {
+				max = b;
+			}
+			if(b < min) {
+				min = b;
+			}
+			suma += b;
 			brojac++;
 			if (brojac == 1 || brojac % slucajniBroj == 0) {
 				slucajnaVrijednost = b;
 				System.out.println("Postavljam: " + slucajnaVrijednost);
 			}
 		}
+		double avg = suma / brojac;
+		System.out.println("Suma je : " + suma);
+		System.out.println("Srednja vrijednost je : " + avg);
+		System.out.println("Najmanji broj je : " + min);
+		System.out.println("Najveći broj je : " + max);
 		System.out.println(slucajnaVrijednost);
 	}
 
