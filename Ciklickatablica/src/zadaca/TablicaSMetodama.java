@@ -1,7 +1,5 @@
 package zadaca;
 
-import java.util.Arrays;
-
 import javax.swing.JOptionPane;
 
 public class TablicaSMetodama {
@@ -17,11 +15,9 @@ public class TablicaSMetodama {
 		return a;
 	}
 	
-	private static int prozivod(int p1,int p2) {
-		int pd = p1 * p2;
-		
-		return pd;
-		
+	private static int proizvod(int niz[][]) {
+		int pd = niz.length * niz[0].length;
+		return pd;	
 	}
 	
 	private static int[][] ucitanjeMatrice(int r,int s) {
@@ -41,6 +37,7 @@ public class TablicaSMetodama {
 		return niz;
 	}
 	public static void main(String[] args) {
-		ispisMatrice(ucitanjeMatrice(ucitajBroj(), ucitajBroj()));
+		proizvod(ispisMatrice(ucitanjeMatrice(ucitajBroj(), ucitajBroj())));
+		
 	}
 }
