@@ -9,7 +9,8 @@
     <fullyQualifiedTypeName name="java.util.concurrent.atomic.AtomicIntegerArray"/>
     <fullyQualifiedTypeName name="javax.print.attribute.standard.JobPrioritySupported"/>
     <fullyQualifiedTypeName name="java.util.Random"/>
-    <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+    <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
 </qualifiedTypeNameHistroy>
