@@ -1,5 +1,6 @@
 package vjezba;
 
+import java.security.DomainCombiner;
 import java.util.Arrays;
 
 public class Vjezba08 {
@@ -17,7 +18,7 @@ public class Vjezba08 {
 		return true;
 	}
 	
-	public static void main(String[] args) {
+	public static void ispisPrima() {
 		for(int i = 2; i < 100;i++) {
 			if(provjeraPrim(i) == true && provjeraPrim(i + 2) == true) {
 				tempNiz[0] = i;
@@ -25,5 +26,9 @@ public class Vjezba08 {
 				System.out.println(Arrays.toString(tempNiz));
 			}
 		}
+		
+	}
+	public static void main(String[] args) {
+		ispisPrima();
 	}
 }
