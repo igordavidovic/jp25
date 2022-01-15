@@ -5,9 +5,9 @@ import java.util.Arrays;
 import javax.swing.JOptionPane;
 
 public class TablicaSMetodama {
-	private static int[][] niz;
-	private static int brojac = 1;	
-	private static int brojac1 = 0;
+	static int[][] niz;
+	static int brojac = 1;	
+	static int brojac1 = 0;
 	
 	static int unesiBroj() {
 		int a = 0;
