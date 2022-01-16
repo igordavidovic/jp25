@@ -40,8 +40,8 @@ public class Alt2SMetodama {
 				TablicaSMetodama.brojac++;
 		}
 	}
-	public static void main(String[] args) {
-		TablicaSMetodama.ucitanjeMatrice(TablicaSMetodama.unesiBroj(), TablicaSMetodama.unesiBroj());
+	
+	private static void punjenjeTablice() {
 		while(TablicaSMetodama.brojac <= TablicaSMetodama.proizvod()) {
 			gdDesnoDolje();
 			ddDesnoLijevo();
@@ -49,6 +49,10 @@ public class Alt2SMetodama {
 			glLijevoDesno();
 			TablicaSMetodama.brojac1++;
 		}
+	}
+	public static void main(String[] args) {
+		TablicaSMetodama.ucitanjeMatrice(TablicaSMetodama.unesiBroj(), TablicaSMetodama.unesiBroj());
+		punjenjeTablice();
 		TablicaSMetodama.ispisMatrice();
 	}
 }

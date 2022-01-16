@@ -10,8 +10,12 @@
     <fullyQualifiedTypeName name="javax.print.attribute.standard.JobPrioritySupported"/>
     <fullyQualifiedTypeName name="java.util.Random"/>
     <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="java.security.DomainCombiner"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="zadaca.TablicaSMetodama"/>
+    <fullyQualifiedTypeName name="zadaca.Alt1SMetodama"/>
+    <fullyQualifiedTypeName name="zadaca.Alt2SMetodama"/>
+    <fullyQualifiedTypeName name="zadaca.Alt3SMetodama"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
-    <fullyQualifiedTypeName name="java.util.Arrays"/>
-    <fullyQualifiedTypeName name="java.security.DomainCombiner"/>
 </qualifiedTypeNameHistroy>

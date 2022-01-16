@@ -64,8 +64,8 @@ public class Alt1SMetodama {
 				brojac++;
 		}
 	}
-	public static void main(String[] args) {
-		ucitanjeMatrice(TablicaSMetodama.unesiBroj(), TablicaSMetodama.unesiBroj());
+	
+	private static void punjenjeTablice() {
 		while(brojac <= proizvod()) {
 			dlLijevoGore();
 			glLijevoDesno();
@@ -73,6 +73,10 @@ public class Alt1SMetodama {
 			ddDesnoLijevo();
 			brojac1++;
 		}
+	}
+	public static void main(String[] args) {
+		ucitanjeMatrice(TablicaSMetodama.unesiBroj(), TablicaSMetodama.unesiBroj());
+		punjenjeTablice();
 		ispisMatrice();
 	}
 }

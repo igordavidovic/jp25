@@ -78,8 +78,7 @@ public class TablicaSMetodama {
 		}
 	}
 	
-	public static void main(String[] args) {
-		ucitanjeMatrice(unesiBroj(), unesiBroj());
+	private static void punjenjeTablice() {
 		while(brojac <= proizvod()) {
 			dlDesnoLijevo();
 			ddLijevoGore();
@@ -87,6 +86,11 @@ public class TablicaSMetodama {
 			glDesnoDolje();
 			brojac1++;
 		}
+	}
+	
+	public static void main(String[] args) {
+		ucitanjeMatrice(unesiBroj(), unesiBroj());
+		punjenjeTablice();
 		ispisMatrice();
 	}
 }
