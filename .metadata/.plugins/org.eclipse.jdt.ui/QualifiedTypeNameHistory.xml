@@ -9,7 +9,6 @@
     <fullyQualifiedTypeName name="java.util.concurrent.atomic.AtomicIntegerArray"/>
     <fullyQualifiedTypeName name="javax.print.attribute.standard.JobPrioritySupported"/>
     <fullyQualifiedTypeName name="java.util.Random"/>
-    <fullyQualifiedTypeName name="java.lang.Math"/>
     <fullyQualifiedTypeName name="java.security.DomainCombiner"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="zadaca.Alt1SMetodama"/>
@@ -19,4 +18,19 @@
     <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
     <fullyQualifiedTypeName name="zadaca.MetodeZaSuprotniSmjer"/>
+    <fullyQualifiedTypeName name="vjezbanje.Vjezba01"/>
+    <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="vjezbanje.Vjezba02"/>
+    <fullyQualifiedTypeName name="vjezbanje.Vjezbanje03"/>
+    <fullyQualifiedTypeName name="vjezbanje.Usluga"/>
+    <fullyQualifiedTypeName name="vjezbanje.Djelatnica"/>
+    <fullyQualifiedTypeName name="vjezbanje.Korisnik"/>
+    <fullyQualifiedTypeName name="vjezbanje.Popravak"/>
+    <fullyQualifiedTypeName name="vjezbanje.Urar"/>
+    <fullyQualifiedTypeName name="vjezbanje.Sat"/>
+    <fullyQualifiedTypeName name="vjezbanje.Vlasnik"/>
+    <fullyQualifiedTypeName name="vjezbanje.Vozilo"/>
+    <fullyQualifiedTypeName name="vjezbanje.Vozac"/>
+    <fullyQualifiedTypeName name="vjezbanje.Putnik"/>
+    <fullyQualifiedTypeName name="vjezbanje.Voznja"/>
 </qualifiedTypeNameHistroy>

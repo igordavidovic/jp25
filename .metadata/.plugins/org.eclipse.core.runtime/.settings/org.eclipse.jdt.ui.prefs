@@ -1,6 +1,6 @@
 content_assist_completion_replacement_background=200,200,0
 content_assist_completion_replacement_foreground=200,0,0
-content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"/>
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="vjezbanje.Vjezba01"><rhs name\="vjezbanje.Vjezba01"/></lhs><lhs name\="vjezbanje.Vjezba02"><rhs name\="vjezbanje.Vjezba02"/></lhs><lhs name\="vjezbanje.Vjezbanje03"><rhs name\="vjezbanje.Vjezbanje03"/></lhs><lhs name\="vjezbanje.Usluga"><rhs name\="vjezbanje.Usluga"/></lhs><lhs name\="vjezbanje.Djelatnica"><rhs name\="vjezbanje.Djelatnica"/></lhs><lhs name\="vjezbanje.Korisnik"><rhs name\="vjezbanje.Korisnik"/></lhs><lhs name\="vjezbanje.Popravak"><rhs name\="vjezbanje.Popravak"/></lhs><lhs name\="vjezbanje.Urar"><rhs name\="vjezbanje.Urar"/></lhs><lhs name\="vjezbanje.Sat"><rhs name\="vjezbanje.Sat"/></lhs><lhs name\="vjezbanje.Vlasnik"><rhs name\="vjezbanje.Vlasnik"/></lhs><lhs name\="vjezbanje.Putnik"><rhs name\="vjezbanje.Putnik"/></lhs><lhs name\="vjezbanje.Voznja"><rhs name\="vjezbanje.Voznja"/></lhs><lhs name\="vjezbanje.Vozilo"><rhs name\="vjezbanje.Vozilo"/></lhs><lhs name\="vjezbanje.Vozac"><rhs name\="vjezbanje.Vozac"/></lhs></history>
 content_assist_number_of_computers=12
 content_assist_parameters_background=52,57,61
 content_assist_parameters_foreground=238,238,238
