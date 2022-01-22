@@ -33,7 +33,16 @@
     <fullyQualifiedTypeName name="vjezbanje.Vozac"/>
     <fullyQualifiedTypeName name="vjezbanje.Putnik"/>
     <fullyQualifiedTypeName name="vjezbanje.Voznja"/>
+    <fullyQualifiedTypeName name="java.io.Console"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
-    <fullyQualifiedTypeName name="java.io.Console"/>
+    <fullyQualifiedTypeName name="vjezbanje.Clock"/>
+    <fullyQualifiedTypeName name="vjezbanje.ComplexDemo"/>
+    <fullyQualifiedTypeName name="vjezbanje.Complex"/>
+    <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
+    <fullyQualifiedTypeName name="edunova.BookDemo"/>
+    <fullyQualifiedTypeName name="vjezbanje.Book"/>
+    <fullyQualifiedTypeName name="vjezbanje.Author"/>
+    <fullyQualifiedTypeName name="java.math.BigDecimal"/>
+    <fullyQualifiedTypeName name="vjezbanje.BookDemo"/>
 </qualifiedTypeNameHistroy>
