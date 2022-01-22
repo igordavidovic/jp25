@@ -33,4 +33,7 @@
     <fullyQualifiedTypeName name="vjezbanje.Vozac"/>
     <fullyQualifiedTypeName name="vjezbanje.Putnik"/>
     <fullyQualifiedTypeName name="vjezbanje.Voznja"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.io.Console"/>
 </qualifiedTypeNameHistroy>
