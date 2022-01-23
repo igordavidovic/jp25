@@ -24,13 +24,13 @@ public class ClockDemo {
 			System.out.println(secondClock.getHMS());
 		}
 		System.out.println("Zbroj dva sata");
-		System.out.println(firstClock.addClock(secondClock).toString());
+		System.out.println(firstClock.addClock(secondClock));
 		System.out.println("Prvi sat");
-		System.out.println(firstClock.toString());
+		System.out.println(firstClock);
 		System.out.println("Drugi sat");
-		System.out.println(secondClock.toString());
+		System.out.println(secondClock);
 		System.out.println("Razlika dva sata");
-		System.out.println(firstClock.subtractClock(secondClock).toString());
+		System.out.println(firstClock.subtractClock(secondClock));
 	}
 	
 	public static void main(String[] args) {

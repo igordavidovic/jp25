@@ -9,9 +9,9 @@ public class BookDemo {
 		Book book = new Book("Developing Java Software", author, BigDecimal.valueOf(79.99));
 		
 		
-		System.out.println(book.toString());
+		System.out.println(book);
 		/*System.out.println(book.getTitle());
-		System.out.println(book.getAuthor().toString());
+		System.out.println(book.getAuthor());
 		System.out.println(book.getPrice());
 		*/
 	}
