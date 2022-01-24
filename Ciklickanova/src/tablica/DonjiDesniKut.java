@@ -10,7 +10,7 @@ public class DonjiDesniKut {
 
 		niz = new int[r][s];
 		proizvod = r * s;
-		d = 0;
+		d = 1;
 		m = 0;
 		if (izbor) {
 			smjerKazaljke();
@@ -38,10 +38,8 @@ public class DonjiDesniKut {
 			}
 			gdDesnoDolje();
 			m++;
-			if (d > proizvod) {
-				break;
-			}
 		}
+		Ispis.ispisMatrice(niz);
 	}
 
 	private static void suprotnoOdKazaljke() {
@@ -63,10 +61,8 @@ public class DonjiDesniKut {
 			}
 			dlSuprotno();
 			m++;
-			if (d > proizvod) {
-				break;
-			}
 		}
+		Ispis.ispisMatrice(niz);
 	}
 
 	private static void ddDesnoLijevo() {

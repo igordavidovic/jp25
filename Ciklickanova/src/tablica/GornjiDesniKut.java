@@ -10,7 +10,7 @@ public class GornjiDesniKut {
 
 		niz = new int[r][s];
 		proizvod = r * s;
-		d = 0;
+		d = 1;
 		m = 0;
 		if (izbor) {
 			smjerKazaljke();
