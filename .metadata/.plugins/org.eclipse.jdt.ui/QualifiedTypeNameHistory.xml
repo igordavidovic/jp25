@@ -34,8 +34,6 @@
     <fullyQualifiedTypeName name="vjezbanje.Putnik"/>
     <fullyQualifiedTypeName name="vjezbanje.Voznja"/>
     <fullyQualifiedTypeName name="java.io.Console"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="vjezbanje.Clock"/>
     <fullyQualifiedTypeName name="vjezbanje.ComplexDemo"/>
     <fullyQualifiedTypeName name="vjezbanje.Complex"/>
@@ -45,4 +43,7 @@
     <fullyQualifiedTypeName name="vjezbanje.Author"/>
     <fullyQualifiedTypeName name="java.math.BigDecimal"/>
     <fullyQualifiedTypeName name="vjezbanje.BookDemo"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.nio.charset.CharsetEncoder"/>
 </qualifiedTypeNameHistroy>
