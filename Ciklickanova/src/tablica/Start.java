@@ -42,6 +42,7 @@ public class Start {
 				break;
 			}
 		}
+		scanner.close();
 		switch (kut) {
 		case 1:
 			DonjiDesniKut.smjer(r, s, smjer);
