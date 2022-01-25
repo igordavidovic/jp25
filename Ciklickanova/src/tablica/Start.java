@@ -9,7 +9,6 @@ public class Start {
 		int s;
 		int smjer;
 		int kut;
-		boolean provjera;
 		Scanner scanner = new Scanner(System.in);
 		
 		while (true) {
@@ -43,24 +42,18 @@ public class Start {
 				break;
 			}
 		}
-		scanner.close();
-		if (smjer == 1) {
-			provjera = true;
-		} else {
-			provjera = false;
-		}
 		switch (kut) {
 		case 1:
-			DonjiDesniKut.smjer(r, s, provjera);
+			DonjiDesniKut.smjer(r, s, smjer);
 			break;
 		case 2:
-			DonjiLijeviKut.smjer(r, s, provjera);
+			DonjiLijeviKut.smjer(r, s, smjer);
 			break;
 		case 3:
-			GornjiLijeviKut.smjer(r, s, provjera);
+			GornjiLijeviKut.smjer(r, s, smjer);
 			break;
 		case 4:
-			GornjiDesniKut.smjer(r, s, provjera);
+			GornjiDesniKut.smjer(r, s, smjer);
 			break;
 		default:
 			break;
