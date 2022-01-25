@@ -3,7 +3,7 @@ package tablica;
 import java.util.Scanner;
 
 public class Unos {
-	static void unosRijedka() {
+	static int unosRijedka() {
 		int r;
 		Scanner scanner = new Scanner(System.in);
 		while (true) {
@@ -11,12 +11,12 @@ public class Unos {
 			r = scanner.nextInt();
 			if (r > 0) {
 				scanner.close();
-				break;
+				return r;
 			}
 		}
 	}
 
-	static void unosStupca() {
+	static int unosStupca() {
 		int s;
 		Scanner scanner = new Scanner(System.in);
 		while (true) {
@@ -24,7 +24,7 @@ public class Unos {
 			s = scanner.nextInt();
 			if (s > 0) {
 				scanner.close();
-				break;
+				return s;
 			}
 		}
 	}
@@ -43,7 +43,7 @@ public class Unos {
 		}
 	}
 
-	static void unosSmjera() {
+	static int unosSmjera() {
 		int smjer;
 		Scanner scanner = new Scanner(System.in);
 		while (true) {
@@ -52,7 +52,7 @@ public class Unos {
 			smjer = scanner.nextInt();
 			if (smjer == 1 || smjer == 2) {
 				scanner.close();
-				break;
+				return smjer;
 			}
 		}
 	}
