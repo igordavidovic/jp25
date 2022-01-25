@@ -6,13 +6,13 @@ public class GornjiLijeviKut {
 	private static int d;
 	private static int m;
 
-	public static void smjer(int r, int s, boolean izbor) {
+	public static void smjer(int r, int s, int smjer) {
 
 		niz = new int[r][s];
 		proizvod = r * s;
 		d = 1;
 		m = 0;
-		if (izbor) {
+		if (smjer == 1) {
 			smjerKazaljke();
 		} else {
 			suprotnoOdKazaljke();
