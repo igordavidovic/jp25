@@ -16,7 +16,6 @@
     <fullyQualifiedTypeName name="zadaca.Alt3SMetodama"/>
     <fullyQualifiedTypeName name="zadaca.TablicaSMetodama"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
-    <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
     <fullyQualifiedTypeName name="zadaca.MetodeZaSuprotniSmjer"/>
     <fullyQualifiedTypeName name="vjezbanje.Vjezba01"/>
     <fullyQualifiedTypeName name="java.lang.Math"/>
@@ -43,7 +42,12 @@
     <fullyQualifiedTypeName name="vjezbanje.Author"/>
     <fullyQualifiedTypeName name="java.math.BigDecimal"/>
     <fullyQualifiedTypeName name="vjezbanje.BookDemo"/>
+    <fullyQualifiedTypeName name="java.nio.charset.CharsetEncoder"/>
+    <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+    <fullyQualifiedTypeName name="tablica.DonjiDesniKut"/>
+    <fullyQualifiedTypeName name="tablica.DonjiLijeviKut"/>
+    <fullyQualifiedTypeName name="tablica.GornjiLijeviKut"/>
+    <fullyQualifiedTypeName name="tablica.GornjiDesniKut"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
-    <fullyQualifiedTypeName name="java.nio.charset.CharsetEncoder"/>
 </qualifiedTypeNameHistroy>
