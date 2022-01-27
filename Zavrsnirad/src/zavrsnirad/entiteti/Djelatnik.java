@@ -1,13 +1,13 @@
-package zavrsnirad;
+package zavrsnirad.entiteti;
 
-import java.util.Date;
+import java.math.BigDecimal;
 
-public class Korisnik {
+public class Djelatnik {
 	private String ime;
 	private String prezime;
+	private String uloga;
 	private String email;
-	private String oib;
-	private Date datumRodenja;
+	private BigDecimal placa;
 	
 	public String getIme() {
 		return ime;
@@ -21,23 +21,23 @@ public class Korisnik {
 	public void setPrezime(String prezime) {
 		this.prezime = prezime;
 	}
+	public String getUloga() {
+		return uloga;
+	}
+	public void setUloga(String uloga) {
+		this.uloga = uloga;
+	}
 	public String getEmail() {
 		return email;
 	}
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getOib() {
-		return oib;
+	public BigDecimal getPlaca() {
+		return placa;
 	}
-	public void setOib(String oib) {
-		this.oib = oib;
-	}
-	public Date getDatumRodenja() {
-		return datumRodenja;
-	}
-	public void setDatumRodenja(Date datumRodenja) {
-		this.datumRodenja = datumRodenja;
+	public void setPlaca(BigDecimal placa) {
+		this.placa = placa;
 	}
 	
 	

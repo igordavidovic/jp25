@@ -1,4 +1,4 @@
-package zavrsnirad;
+package zavrsnirad.entiteti;
 
 import java.math.BigDecimal;
 
