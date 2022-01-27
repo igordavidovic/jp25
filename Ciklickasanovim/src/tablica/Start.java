@@ -3,46 +3,11 @@ package tablica;
 import java.util.Scanner;
 
 public class Start {
-
-	public static void main(String[] args) {
-		int r;
-		int s;
-		int smjer;
-		int kut;
-		Scanner scanner = new Scanner(System.in);
-		
-		while (true) {
-			System.out.print("Upišite broj rijedaka u matrici : ");
-			r = scanner.nextInt();
-			if (r > 0) {
-				break;
-			}
-		}
-
-		while (true) {
-			System.out.print("Upišite broj stupaca u matrici : ");
-			s = scanner.nextInt();
-			if (s > 0) {
-				break;
-			}
-		}
-
-		while (true) {
-			System.out.println("Izaberite početni kut matrice \n1.Donji desni kut \n2.Donji lijevi kut \n3.Gornji lijevi kut \n4.Gornji desni kut");
-			kut = scanner.nextInt();
-			if (kut > 0 && kut < 5) {
-				break;
-			}
-		}
-
-		while (true) {
-			System.out.println("U kojem će se smjeru brojevi u matrici kretati \n1.U smjeru kazaljke na satu \n2.Suprotno od smjera kazaljke na satu");
-			smjer = scanner.nextInt();
-			if (smjer == 1 || smjer == 2) {
-				break;
-			}
-		}
-		scanner.close();
+	
+	private static Scanner scanner;
+	
+	private static void izborPocetka(int r,int s,int smjer) {
+		int kut = Unos.unosKuta(scanner);
 		switch (kut) {
 		case 1:
 			DonjiDesniKut.smjer(r, s, smjer);
@@ -59,5 +24,14 @@ public class Start {
 		default:
 			break;
 		}
+	}
+ 
+	public static void main(String[] args) {
+		scanner = new Scanner(System.in);
+		int r = Unos.unosRijedka(scanner);
+		int s = Unos.unosStupca(scanner);
+		int smjer = Unos.unosSmjera(scanner);
+		izborPocetka(r, s, smjer);
+		scanner.close();
 	}
 }
