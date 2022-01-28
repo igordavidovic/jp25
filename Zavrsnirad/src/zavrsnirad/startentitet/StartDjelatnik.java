@@ -1,5 +1,6 @@
 package zavrsnirad.startentitet;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -10,10 +11,18 @@ public class StartDjelatnik {
 	private List<Djelatnik> djelatnici;
 	private Scanner scanner;
 	private Djelatnik djelatnik;
-
+	
+	
+	private void PocetniPodaci() {
+		for(int i = 0;i < 10;i++) {
+			djelatnici.add(new Djelatnik("A" + (i+1),"B" + (i+1),"R" + (i+1),"E"+(i+1)+"@.com",new BigDecimal(i*1000)));
+		}
+	}
+	
 	public StartDjelatnik() {
 		djelatnici = new ArrayList<>();
 		scanner = new Scanner(System.in);
+		PocetniPodaci();
 		program();
 		scanner.close();
 	}
@@ -63,7 +72,7 @@ public class StartDjelatnik {
 	private void brisanje() {
 		pregled();
 		djelatnici.remove(Unos.unesiInt(scanner, "Unesi redni broj djelatnika koji će se ukloniti") - 1);
-
+		izbornik();
 	}
 
 	private void promjena() {
