@@ -44,16 +44,12 @@ public class StartDjelatnik {
 			izbornik();
 			break;
 		case 5:
-			izlaz();
+			System.out.println("\nHvala Što ste koristili naš program, doviđenja!");
 			break;
 		default:
 			System.out.println("Izabrana akcija nije moguća");
 			izbornik();
 		}
-	}
-
-	private void izlaz() {
-
 	}
 
 	private void pregled() {

@@ -40,7 +40,6 @@
     <fullyQualifiedTypeName name="edunova.BookDemo"/>
     <fullyQualifiedTypeName name="vjezbanje.Book"/>
     <fullyQualifiedTypeName name="vjezbanje.Author"/>
-    <fullyQualifiedTypeName name="java.math.BigDecimal"/>
     <fullyQualifiedTypeName name="vjezbanje.BookDemo"/>
     <fullyQualifiedTypeName name="java.nio.charset.CharsetEncoder"/>
     <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
@@ -48,6 +47,13 @@
     <fullyQualifiedTypeName name="tablica.DonjiLijeviKut"/>
     <fullyQualifiedTypeName name="tablica.GornjiLijeviKut"/>
     <fullyQualifiedTypeName name="tablica.GornjiDesniKut"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.sql.Date"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="java.math.BigDecimal"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="zavrsnirad.startentitet.StartDjelatnik"/>
+    <fullyQualifiedTypeName name="zavrsnirad.entiteti.Djelatnik"/>
 </qualifiedTypeNameHistroy>
