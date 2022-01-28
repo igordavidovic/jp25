@@ -61,4 +61,9 @@ public class Djelatnik {
 		this.placa = placa;
 	}
 
+	@Override
+	public String toString() {
+		return new StringBuilder().append(ime).append(" ").append(prezime).append("  ").append(uloga).append("  ").append(email).append("  ").append(placa).toString();
+	}
+
 }

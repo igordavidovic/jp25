@@ -61,4 +61,9 @@ public class Korisnik {
 		this.datumRodenja = datumRodenja;
 	}
 
+	@Override
+	public String toString() {
+		return new StringBuilder().append(ime).append(" ").append(prezime).append("  ").append(oib).append("  ").append(email).toString();
+	}
+	
 }
