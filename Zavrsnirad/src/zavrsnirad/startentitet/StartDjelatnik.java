@@ -33,10 +33,10 @@ public class StartDjelatnik {
 	}
 
 	private void izbornik() {
-		System.out.println("\n1. Unos mobitela");
-		System.out.println("2. Promjena mobitela");
-		System.out.println("3. Brisanje mobitela");
-		System.out.println("4. Pregled mobitela");
+		System.out.println("\n1. Unos djelatnika");
+		System.out.println("2. Promjena djelatnika");
+		System.out.println("3. Brisanje djelatnika");
+		System.out.println("4. Pregled djelatnika");
 		System.out.println("5. Izlaz iz programa");
 		switch (Unos.unesiInt(scanner, "Izaberi akciju")) {
 		case 1:
