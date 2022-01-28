@@ -53,9 +53,49 @@ public class StartKorisnik {
 		
 	}
 
+	private void pregled() {
+		int a = 1;
+		for(Korisnik k : korisnici) {
+			System.out.println(a++ + ". " + k);
+		}
+	}
+
+	private void brisanje() {
+		pregled();
+		korisnici.remove(Unos.unesiInt(scanner, "Unesite redni broj korisnika kojeg želite ukloniti") - 1);
+		izbornik();
+	}
+
+	private void promjena() {
+		pregled();
+		int a = Unos.unesiInt(scanner, "Unesite redni broj korisnika koji želite mjenjati");
+		korisnik = korisnici.get(a - 1);
+		korisnik.setIme(Unos.unesiString(scanner, "Unesitet novo ime"));
+		korisnik.setPrezime(Unos.unesiString(scanner, "Unesite novo prezime"));
+		korisnik.setOib(Unos.unesiString(scanner, "Unesite novi OIB"));
+		korisnik.setEmail(Unos.unesiString(scanner, "Unesite novi email"));
+		izbornik();
+	}
+
+	private void unos() {
+		korisnik = new Korisnik();
+		korisnik.setIme(Unos.unesiString(scanner, "Unesite ime korisnika"));
+		korisnik.setPrezime(Unos.unesiString(scanner, "Unesite prezime korisnika"));
+		korisnik.setOib(Unos.unesiString(scanner, "Unesite OIB korisnika"));
+		korisnik.setEmail(Unos.unesiString(scanner, "Unesite email korisnika"));
+		korisnici.add(korisnik);
+		izbornik();
+	}
+
 	private void naslov() {
 		System.out.println("*********************");
 		System.out.println("**** Korisnik V1 ****");
 		System.out.println("*********************");
 	}
+	
+	public static void main(String[] args) {
+		new StartKorisnik();
+	}
 }
+
+
