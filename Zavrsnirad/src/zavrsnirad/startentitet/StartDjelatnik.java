@@ -44,7 +44,7 @@ public class StartDjelatnik {
 			izbornik();
 			break;
 		case 5:
-			System.out.println("\nHvala Što ste koristili naš program, doviđenja!");
+			System.out.println("\nHvala što ste koristili naš program, doviđenja!");
 			break;
 		default:
 			System.out.println("Izabrana akcija nije moguća");
