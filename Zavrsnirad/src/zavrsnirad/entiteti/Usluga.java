@@ -41,4 +41,9 @@ public class Usluga {
 		this.cijena = cijena;
 	}
 
+	@Override
+	public String toString() {
+		return new StringBuilder().append(djelatnik.getIme()).append(" ").append(djelatnik.getPrezime()).append("  ").append(naziv).append("  ").append(cijena).toString();
+	}
+
 }
