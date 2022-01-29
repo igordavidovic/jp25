@@ -25,18 +25,26 @@ public class StartProgram {
 		System.out.println("6. Izlaz iz programa");
 		switch (Unos.unesiInt(scanner, "Unesite akciju")) {
 		case 1:
+			new StartDjelatnik();
 			break;
 		case 2:
+			new StartKorisnik();
 			break;
 		case 3:
+			new StartUsluga();
 			break;
 		case 4:
+			new StartPosjeta();
 			break;
 		case 5:
+			new StartPosjeta_Usluga();
 			break;
 		case 6:
+			System.out.println("\nHvala što ste koristili naš program, doviđenja!");
 			break;
 		default:
+			System.out.println("Izabrana akcija nije moguća");
+			izbornik();
 		}
 	}
 
