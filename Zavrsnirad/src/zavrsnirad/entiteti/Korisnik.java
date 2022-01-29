@@ -65,7 +65,7 @@ public class Korisnik {
 
 	@Override
 	public String toString() {
-		return new StringBuilder().append(ime).append(" ").append(prezime).append("  ").append(oib).append("  ").append(email).toString();
+		return new StringBuilder().append(sifra).append("  ").append(ime).append(" ").append(prezime).append("  ").append(oib).append("  ").append(email).toString();
 	}
 
 	public int getSifra() {

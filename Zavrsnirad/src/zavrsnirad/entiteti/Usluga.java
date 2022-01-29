@@ -45,7 +45,7 @@ public class Usluga {
 
 	@Override
 	public String toString() {
-		return new StringBuilder().append(djelatnik.getIme()).append(" ").append(djelatnik.getPrezime()).append("  ").append(naziv).append("  ").append(cijena).toString();
+		return new StringBuilder().append(sifra).append("  ").append(djelatnik.getIme()).append(" ").append(djelatnik.getPrezime()).append("  ").append(naziv).append("  ").append(cijena).toString();
 	}
 
 	public int getSifra() {

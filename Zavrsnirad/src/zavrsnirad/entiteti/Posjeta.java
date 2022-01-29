@@ -76,7 +76,7 @@ public class Posjeta {
 
 	@Override
 	public String toString() {
-		return new StringBuilder().append(korisnik.getIme()).append(" ").append(korisnik.getPrezime()).append("  ").append(datumPrijave).append("-").append(datumOdjave).append("  ").append(brojSoba).append("  ").append(brojOdraslih).append("  ").append(brojDjece).toString();
+		return new StringBuilder().append(sifra).append("  ").append(korisnik.getIme()).append(" ").append(korisnik.getPrezime()).append("  ").append(datumPrijave).append("-").append(datumOdjave).append("  ").append(brojSoba).append("  ").append(brojOdraslih).append("  ").append(brojDjece).toString();
 	}
 
 	public int getSifra() {

@@ -65,7 +65,7 @@ public class Djelatnik {
 
 	@Override
 	public String toString() {
-		return new StringBuilder().append(ime).append(" ").append(prezime).append("  ").append(uloga).append("  ").append(email).append("  ").append(placa).toString();
+		return new StringBuilder().append(sifra).append("  ").append(ime).append(" ").append(prezime).append("  ").append(uloga).append("  ").append(email).append("  ").append(placa).toString();
 	}
 
 	public int getSifra() {
