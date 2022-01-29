@@ -1,6 +1,7 @@
 package zavrsnirad.startentitet;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 
@@ -14,8 +15,15 @@ public class StartKorisnik {
 	public StartKorisnik() {
 		korisnici = new ArrayList<>();
 		scanner = new Scanner(System.in);
+		pocetniPodaci();
 		program();
 		scanner.close();
+	}
+	
+	private void pocetniPodaci() {
+		for(int i = 0;i < 10;i++) {
+			korisnici.add(new Korisnik("A" + (i+1), "B" + (i+1), "E"+(i+1)+"@.com", "OIB"+(i+1), new Date()));
+		}
 	}
 
 	private void program() {
