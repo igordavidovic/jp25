@@ -36,12 +36,12 @@ public class StartPosjeta_Usluga {
 	private void pocetniPodaci() {
 		for (int i = 0; i < 10; i++) {
 			korisnici.add(
-					new Korisnik("A" + (i + 1), "B" + (i + 1), "E" + (i + 1) + "@.com", "OIB" + (i + 1), new Date()));
-			posjete.add(new Posjeta(korisnici.get(i), new Date(), new Date(), i + 1, i + 1, i));
-			djelatnici.add(new Djelatnik("A" + (i + 1), "B" + (i + 1), "R" + (i + 1), "E" + (i + 1) + "@.com",
+					new Korisnik(12+i,"A" + (i + 1), "B" + (i + 1), "E" + (i + 1) + "@.com", "OIB" + (i + 1), new Date()));
+			posjete.add(new Posjeta(34+i,korisnici.get(i), new Date(), new Date(), i + 1, i + 1, i));
+			djelatnici.add(new Djelatnik(12+i,"A" + (i + 1), "B" + (i + 1), "R" + (i + 1), "E" + (i + 1) + "@.com",
 					new BigDecimal(i * 1000)));
-			usluge.add(new Usluga(djelatnici.get(i), "U" + (i + 1), new BigDecimal(i * 100)));
-			posjete_usluge.add(new Posjeta_usluga(usluge.get(i), posjete.get(i)));
+			usluge.add(new Usluga(23+i,djelatnici.get(i), "U" + (i + 1), new BigDecimal(i * 100)));
+			posjete_usluge.add(new Posjeta_usluga(100+i,usluge.get(i), posjete.get(i)));
 		}
 	}
 

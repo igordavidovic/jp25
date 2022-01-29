@@ -27,10 +27,10 @@ public class StartUsluga {
 	private void PocetniPodaci() {
 		djelatnik = new Djelatnik();
 		for (int i = 0; i < 10; i++) {
-			djelatnici.add(new Djelatnik("A" + (i + 1), "B" + (i + 1), "R" + (i + 1), "E" + (i + 1) + "@.com",
+			djelatnici.add(new Djelatnik(12+i,"A" + (i + 1), "B" + (i + 1), "R" + (i + 1), "E" + (i + 1) + "@.com",
 					new BigDecimal(i * 1000)));
 			djelatnik = djelatnici.get(i);
-			usluge.add(new Usluga(djelatnik, "U" + (i + 1), new BigDecimal(i * 100)));
+			usluge.add(new Usluga(23+i,djelatnik, "U" + (i + 1), new BigDecimal(i * 100)));
 		}
 	}
 

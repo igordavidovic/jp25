@@ -15,7 +15,7 @@ public class StartDjelatnik {
 	
 	private void PocetniPodaci() {
 		for(int i = 0;i < 10;i++) {
-			djelatnici.add(new Djelatnik("A" + (i+1),"B" + (i+1),"R" + (i+1),"E"+(i+1)+"@.com",new BigDecimal(i*1000)));
+			djelatnici.add(new Djelatnik(12+i,"A" + (i+1),"B" + (i+1),"R" + (i+1),"E"+(i+1)+"@.com",new BigDecimal(i*1000)));
 		}
 	}
 	

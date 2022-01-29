@@ -3,6 +3,7 @@ package zavrsnirad.entiteti;
 import java.math.BigDecimal;
 
 public class Djelatnik {
+	private int sifra;
 	private String ime;
 	private String prezime;
 	private String uloga;
@@ -13,7 +14,8 @@ public class Djelatnik {
 
 	}
 
-	public Djelatnik(String ime, String prezime, String uloga, String email, BigDecimal placa) {
+	public Djelatnik(int sifra,String ime, String prezime, String uloga, String email, BigDecimal placa) {
+		this.sifra = sifra;
 		this.ime = ime;
 		this.prezime = prezime;
 		this.uloga = uloga;
@@ -64,6 +66,14 @@ public class Djelatnik {
 	@Override
 	public String toString() {
 		return new StringBuilder().append(ime).append(" ").append(prezime).append("  ").append(uloga).append("  ").append(email).append("  ").append(placa).toString();
+	}
+
+	public int getSifra() {
+		return sifra;
+	}
+
+	public void setSifra(int sifra) {
+		this.sifra = sifra;
 	}
 
 }

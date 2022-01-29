@@ -22,7 +22,7 @@ public class StartKorisnik {
 	
 	private void pocetniPodaci() {
 		for(int i = 0;i < 10;i++) {
-			korisnici.add(new Korisnik("A" + (i+1), "B" + (i+1), "E"+(i+1)+"@.com", "OIB"+(i+1), new Date()));
+			korisnici.add(new Korisnik(12+i,"A" + (i+1), "B" + (i+1), "E"+(i+1)+"@.com", "OIB"+(i+1), new Date()));
 		}
 	}
 

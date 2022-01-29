@@ -26,8 +26,8 @@ public class StartPosjeta {
 	private void pocetniPodaci() {
 		for (int i = 0; i < 10; i++) {
 			korisnici.add(
-					new Korisnik("A" + (i + 1), "B" + (i + 1), "E" + (i + 1) + "@.com", "OIB" + (i + 1), new Date()));
-			posjete.add(new Posjeta(korisnici.get(i), new Date(), new Date(), i + 1, i + 1, i));
+					new Korisnik(12+i,"A" + (i + 1), "B" + (i + 1), "E" + (i + 1) + "@.com", "OIB" + (i + 1), new Date()));
+			posjete.add(new Posjeta(34+i,korisnici.get(i), new Date(), new Date(), i + 1, i + 1, i));
 		}
 	}
 

@@ -3,6 +3,7 @@ package zavrsnirad.entiteti;
 import java.util.Date;
 
 public class Korisnik {
+	private int sifra;
 	private String ime;
 	private String prezime;
 	private String email;
@@ -13,7 +14,8 @@ public class Korisnik {
 
 	}
 
-	public Korisnik(String ime, String prezime, String email, String oib, Date datumRodenja) {
+	public Korisnik(int sifra,String ime, String prezime, String email, String oib, Date datumRodenja) {
+		this.sifra = sifra;
 		this.ime = ime;
 		this.prezime = prezime;
 		this.email = email;
@@ -64,6 +66,14 @@ public class Korisnik {
 	@Override
 	public String toString() {
 		return new StringBuilder().append(ime).append(" ").append(prezime).append("  ").append(oib).append("  ").append(email).toString();
+	}
+
+	public int getSifra() {
+		return sifra;
+	}
+
+	public void setSifra(int sifra) {
+		this.sifra = sifra;
 	}
 	
 }

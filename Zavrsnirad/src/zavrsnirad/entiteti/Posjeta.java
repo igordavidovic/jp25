@@ -3,6 +3,7 @@ package zavrsnirad.entiteti;
 import java.util.Date;
 
 public class Posjeta {
+	private int sifra;
 	private Korisnik korisnik;
 	private Date datumPrijave;
 	private Date datumOdjave;
@@ -14,8 +15,9 @@ public class Posjeta {
 
 	}
 
-	public Posjeta(Korisnik korisnik, Date datumPrijave, Date datumOdjave, int brojSoba, int brojOdraslih,
+	public Posjeta(int sifra,Korisnik korisnik, Date datumPrijave, Date datumOdjave, int brojSoba, int brojOdraslih,
 			int brojDjece) {
+		this.sifra = sifra;
 		this.korisnik = korisnik;
 		this.datumPrijave = datumPrijave;
 		this.datumOdjave = datumOdjave;
@@ -75,6 +77,14 @@ public class Posjeta {
 	@Override
 	public String toString() {
 		return new StringBuilder().append(korisnik.getIme()).append(" ").append(korisnik.getPrezime()).append("  ").append(datumPrijave).append("-").append(datumOdjave).append("  ").append(brojSoba).append("  ").append(brojOdraslih).append("  ").append(brojDjece).toString();
+	}
+
+	public int getSifra() {
+		return sifra;
+	}
+
+	public void setSifra(int sifra) {
+		this.sifra = sifra;
 	}
 
 }
