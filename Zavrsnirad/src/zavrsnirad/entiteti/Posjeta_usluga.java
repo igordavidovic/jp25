@@ -39,4 +39,9 @@ public class Posjeta_usluga {
 		this.sifra = sifra;
 	}
 
+	@Override
+	public String toString() {
+		return new StringBuilder().append(sifra).append("  ").append(posjeta.getSifra()).append("  ").append(usluga.getSifra()).toString();
+	}
+	
 }
