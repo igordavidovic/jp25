@@ -53,7 +53,8 @@ public class StartDjelatnik {
 			izbornik();
 			break;
 		case 5:
-			System.out.println("\nHvala što ste koristili naš program, doviđenja!");
+			//System.out.println("\nHvala što ste koristili naš program, doviđenja!");
+			new StartProgram();
 			break;
 		default:
 			System.out.println("Izabrana akcija nije moguća");
@@ -106,7 +107,7 @@ public class StartDjelatnik {
 		System.out.println("**********************");
 	}
 
-	public static void main(String[] args) {
+	/*public static void main(String[] args) {
 		new StartDjelatnik();
-	}
+	}*/
 }

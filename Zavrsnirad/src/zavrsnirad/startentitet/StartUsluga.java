@@ -60,7 +60,8 @@ public class StartUsluga {
 			izbornik();
 			break;
 		case 5:
-			System.out.println("\nHvala što ste koristili naš program, doviđenja!");
+			//System.out.println("\nHvala što ste koristili naš program, doviđenja!");
+			new StartUsluga();
 			break;
 		default:
 			System.out.println("Izabrana akcija nije moguća");
@@ -119,7 +120,7 @@ public class StartUsluga {
 		}
 	}
 
-	public static void main(String[] args) {
+	/*public static void main(String[] args) {
 		new StartUsluga();
-	}
+	}*/
 }
