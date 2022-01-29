@@ -53,5 +53,7 @@ public class StartProgram {
 		System.out.println("**** Program Recepcija V1 ****");
 		System.out.println("******************************");
 	}
-
+	public static void main(String[] args) {
+		new StartProgram();
+	}
 }

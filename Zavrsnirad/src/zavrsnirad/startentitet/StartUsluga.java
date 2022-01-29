@@ -61,7 +61,7 @@ public class StartUsluga {
 			break;
 		case 5:
 			//System.out.println("\nHvala što ste koristili naš program, doviđenja!");
-			new StartUsluga();
+			new StartProgram();
 			break;
 		default:
 			System.out.println("Izabrana akcija nije moguća");
