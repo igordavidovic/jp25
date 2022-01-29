@@ -99,7 +99,8 @@ public class StartPosjeta_Usluga {
 		pregledPosjeta();
 		int b = Unos.unesiInt(scanner, "Unesite posjetu s kojom želite zamjeniti staru");
 		posjeta_usluga.setPosjeta(posjete.get(b-1));
-		int c = Unos.unesiInt(scanner, "Unesite uslug s kojom želite zamjeniti staru");
+		pregledUsluga();
+		int c = Unos.unesiInt(scanner, "Unesite uslugu s kojom želite zamjeniti staru");
 		posjeta_usluga.setUsluga(usluge.get(c-1));
 		izbornik();
 	}
