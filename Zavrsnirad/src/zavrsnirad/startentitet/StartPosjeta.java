@@ -67,24 +67,24 @@ public class StartPosjeta {
 
 	private void pregled() {
 		int a = 1;
-		for(Posjeta p: posjete) {
+		for (Posjeta p : posjete) {
 			System.out.println(a++ + ". " + p);
 		}
 	}
 
 	private void brisanje() {
 		pregled();
-		posjete.remove(Unos.unesiInt(scanner, "Unesite redni broj posjete koju želite ukloniti"));
+		posjete.remove(Unos.unesiInt(scanner, "Unesite redni broj posjete koju želite ukloniti") - 1);
 		izbornik();
 	}
 
 	private void promjena() {
 		pregled();
 		int a = Unos.unesiInt(scanner, "Unesite redni broj posjete koju želite promjeniti");
-		posjeta = posjete.get(a-1);
+		posjeta = posjete.get(a - 1);
 		pregledKorisnik();
 		int b = Unos.unesiInt(scanner, "Unesite redni broj korisnika s kojim želite zamjeniti staroga");
-		posjeta.setKorisnik(korisnici.get(b-1));
+		posjeta.setKorisnik(korisnici.get(b - 1));
 		posjeta.setDatumPrijave(new Date());
 		posjeta.setDatumOdjave(new Date());
 		posjeta.setBrojSoba(Unos.unesiInt(scanner, "Unesite novi broj soba"));
@@ -97,7 +97,7 @@ public class StartPosjeta {
 		pregledKorisnik();
 		int a = Unos.unesiInt(scanner, "Unesite redni broj korisnika kojega želite izabrati");
 		posjeta = new Posjeta();
-		posjeta.setKorisnik(korisnici.get(a-1));
+		posjeta.setKorisnik(korisnici.get(a - 1));
 		posjeta.setDatumPrijave(new Date());
 		posjeta.setDatumOdjave(new Date());
 		posjeta.setBrojSoba(Unos.unesiInt(scanner, "Unesite broj soba kojih želite rezervirati"));
@@ -106,20 +106,20 @@ public class StartPosjeta {
 		posjete.add(posjeta);
 		izbornik();
 	}
-	
+
 	private void pregledKorisnik() {
 		int a = 1;
-		for(Korisnik k : korisnici) {
+		for (Korisnik k : korisnici) {
 			System.out.println(a++ + ". " + k);
 		}
 	}
-	
+
 	private void naslov() {
 		System.out.println("********************");
 		System.out.println("**** Posjeta V1 ****");
 		System.out.println("********************");
 	}
-	
+
 	public static void main(String[] args) {
 		new StartPosjeta();
 	}
