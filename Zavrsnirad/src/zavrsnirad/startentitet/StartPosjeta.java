@@ -21,7 +21,7 @@ public class StartPosjeta {
 		naslov();
 		izbornik();
 	}
-
+	
 	private void izbornik() {
 		System.out.println("\n1. Unos posjete");
 		System.out.println("2. Promjena posjete");
@@ -30,18 +30,45 @@ public class StartPosjeta {
 		System.out.println("5. Izlaz iz programa");
 		switch (Unos.unesiInt(scanner, "Izaberite akciju")) {
 		case 1:
+			unos();
 			break;
 		case 2:
+			promjena();
 			break;
 		case 3:
+			brisanje();
 			break;
 		case 4:
+			pregled();
+			izbornik();
 			break;
 		case 5:
+			System.out.println("\nHvala što ste koristili naš program, doviđenja!");
 			break;
 		default:
-
+			System.out.println("Izabrana akcija nije moguća");
+			izbornik();
 		}
+	}
+
+	private void pregled() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void brisanje() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void promjena() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void unos() {
+		// TODO Auto-generated method stub
+		
 	}
 
 	private void naslov() {

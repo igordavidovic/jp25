@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.lang.Boolean"/>
-    <fullyQualifiedTypeName name="java.lang.Double"/>
     <fullyQualifiedTypeName name="java.lang.InternalError"/>
     <fullyQualifiedTypeName name="javax.swing.plaf.synth.SynthOptionPaneUI"/>
     <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
@@ -36,7 +34,6 @@
     <fullyQualifiedTypeName name="vjezbanje.Clock"/>
     <fullyQualifiedTypeName name="vjezbanje.ComplexDemo"/>
     <fullyQualifiedTypeName name="vjezbanje.Complex"/>
-    <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
     <fullyQualifiedTypeName name="edunova.BookDemo"/>
     <fullyQualifiedTypeName name="vjezbanje.Book"/>
     <fullyQualifiedTypeName name="vjezbanje.Author"/>
@@ -47,13 +44,20 @@
     <fullyQualifiedTypeName name="tablica.DonjiLijeviKut"/>
     <fullyQualifiedTypeName name="tablica.GornjiLijeviKut"/>
     <fullyQualifiedTypeName name="tablica.GornjiDesniKut"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="java.sql.Date"/>
-    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="zavrsnirad.startentitet.StartDjelatnik"/>
+    <fullyQualifiedTypeName name="zavrsnirad.entiteti.Korisnik"/>
+    <fullyQualifiedTypeName name="zavrsnirad.startentitet.StartKorisnik"/>
+    <fullyQualifiedTypeName name="zavrsnirad.entiteti.Usluga"/>
     <fullyQualifiedTypeName name="java.math.BigDecimal"/>
+    <fullyQualifiedTypeName name="zavrsnirad.startentitet.StartUsluga"/>
+    <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
+    <fullyQualifiedTypeName name="zavrsnirad.entiteti.Djelatnik"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="zavrsnirad.startentitet.Unos"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
-    <fullyQualifiedTypeName name="zavrsnirad.startentitet.StartDjelatnik"/>
-    <fullyQualifiedTypeName name="zavrsnirad.entiteti.Djelatnik"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="zavrsnirad.entiteti.Posjeta"/>
 </qualifiedTypeNameHistroy>
