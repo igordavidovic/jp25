@@ -72,4 +72,9 @@ public class Posjeta {
 		this.brojDjece = brojDjece;
 	}
 
+	@Override
+	public String toString() {
+		return new StringBuilder().append(korisnik.getIme()).append(" ").append(korisnik.getPrezime()).append("  ").append(datumPrijave).append("-").append(datumOdjave).append("  ").append(brojSoba).append("  ").append(brojOdraslih).append("  ").append(brojDjece).toString();
+	}
+
 }
