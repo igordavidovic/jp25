@@ -96,6 +96,7 @@ public class StartPosjeta_Usluga {
 		pregled();
 		int a = Unos.unesiInt(scanner, "Unesite posjetu_uslugu koju želite promjeniti");
 		posjeta_usluga = posjete_usluge.get(a-1);
+		posjeta_usluga.setSifra(Unos.unesiInt(scanner, "Unesite novu sifru"));
 		pregledPosjeta();
 		int b = Unos.unesiInt(scanner, "Unesite posjetu s kojom želite zamjeniti staru");
 		posjeta_usluga.setPosjeta(posjete.get(b-1));
@@ -106,9 +107,10 @@ public class StartPosjeta_Usluga {
 	}
 
 	private void unos() {
+		posjeta_usluga = new Posjeta_usluga();
+		posjeta_usluga.setSifra(Unos.unesiInt(scanner, "Unesite sifru"));
 		pregledPosjeta();
 		int a = Unos.unesiInt(scanner, "Unesite posjetu koju želite izabrati");
-		posjeta_usluga = new Posjeta_usluga();
 		posjeta_usluga.setPosjeta(posjete.get(a-1));
 		pregledUsluga();
 		int b = Unos.unesiInt(scanner, "Unesite uslugu koju želite izabrati");

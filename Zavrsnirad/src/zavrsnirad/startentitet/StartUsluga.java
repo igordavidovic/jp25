@@ -85,6 +85,7 @@ public class StartUsluga {
 		pregled();
 		int a = Unos.unesiInt(scanner, "Unesite redni broj usluge koju želite promjeniti");
 		usluga = usluge.get(a - 1);
+		usluga.setSifra(Unos.unesiInt(scanner, "Unesite novu sifru"));
 		pregledDjelatnik();
 		int b = Unos.unesiInt(scanner, "Unesite redni broj djelatnika s kojima želite promjeniti staroga");
 		usluga.setDjelatnik(djelatnici.get(b-1));
@@ -94,9 +95,10 @@ public class StartUsluga {
 	}
 
 	private void unos() {
+		usluga = new Usluga();
+		usluga.setSifra(Unos.unesiInt(scanner, "Unesite sifru usluge"));
 		pregledDjelatnik();
 		int a = Unos.unesiInt(scanner, "Izaberite redni broj djelatnika kojega želite");
-		usluga = new Usluga();
 		usluga.setDjelatnik(djelatnici.get(a-1));
 		usluga.setNaziv(Unos.unesiString(scanner, "Unesite naziv usluge"));
 		usluga.setCijena(Unos.unesiBigDecimal(scanner, "Unesite cijenu usluge"));

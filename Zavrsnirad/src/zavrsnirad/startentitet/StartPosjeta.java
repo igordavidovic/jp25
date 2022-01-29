@@ -82,6 +82,7 @@ public class StartPosjeta {
 		pregled();
 		int a = Unos.unesiInt(scanner, "Unesite redni broj posjete koju želite promjeniti");
 		posjeta = posjete.get(a - 1);
+		posjeta.setSifra(Unos.unesiInt(scanner, "Unesite novu sifru"));
 		pregledKorisnik();
 		int b = Unos.unesiInt(scanner, "Unesite redni broj korisnika s kojim želite zamjeniti staroga");
 		posjeta.setKorisnik(korisnici.get(b - 1));
@@ -94,9 +95,10 @@ public class StartPosjeta {
 	}
 
 	private void unos() {
+		posjeta = new Posjeta();
+		posjeta.setSifra(Unos.unesiInt(scanner, "Unesite sifru"));
 		pregledKorisnik();
 		int a = Unos.unesiInt(scanner, "Unesite redni broj korisnika kojega želite izabrati");
-		posjeta = new Posjeta();
 		posjeta.setKorisnik(korisnici.get(a - 1));
 		posjeta.setDatumPrijave(new Date());
 		posjeta.setDatumOdjave(new Date());

@@ -78,7 +78,8 @@ public class StartKorisnik {
 		pregled();
 		int a = Unos.unesiInt(scanner, "Unesite redni broj korisnika koji želite mjenjati");
 		korisnik = korisnici.get(a - 1);
-		korisnik.setIme(Unos.unesiString(scanner, "Unesitet novo ime"));
+		korisnik.setSifra(Unos.unesiInt(scanner, "Unesite novu šifru "));
+		korisnik.setIme(Unos.unesiString(scanner, "Unesite novo ime"));
 		korisnik.setPrezime(Unos.unesiString(scanner, "Unesite novo prezime"));
 		korisnik.setOib(Unos.unesiString(scanner, "Unesite novi OIB"));
 		korisnik.setEmail(Unos.unesiString(scanner, "Unesite novi email"));
@@ -87,6 +88,7 @@ public class StartKorisnik {
 
 	private void unos() {
 		korisnik = new Korisnik();
+		korisnik.setSifra(Unos.unesiInt(scanner, "Unesite novu šifru"));
 		korisnik.setIme(Unos.unesiString(scanner, "Unesite ime korisnika"));
 		korisnik.setPrezime(Unos.unesiString(scanner, "Unesite prezime korisnika"));
 		korisnik.setOib(Unos.unesiString(scanner, "Unesite OIB korisnika"));

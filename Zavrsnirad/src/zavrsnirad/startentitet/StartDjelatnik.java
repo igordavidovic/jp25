@@ -71,29 +71,31 @@ public class StartDjelatnik {
 
 	private void brisanje() {
 		pregled();
-		djelatnici.remove(Unos.unesiInt(scanner, "Unesi redni broj djelatnika koji će se ukloniti") - 1);
+		djelatnici.remove(Unos.unesiInt(scanner, "Unesite redni broj djelatnika koji će se ukloniti") - 1);
 		izbornik();
 	}
 
 	private void promjena() {
 		pregled();
-		int a = Unos.unesiInt(scanner, "Unesi redni broj djelatnika koji želite mjenjati");
+		int a = Unos.unesiInt(scanner, "Unesite redni broj djelatnika koji želite mjenjati");
 		djelatnik = djelatnici.get(a - 1);
-		djelatnik.setIme(Unos.unesiString(scanner, "Unesi novo ime"));
-		djelatnik.setPrezime(Unos.unesiString(scanner, "Unesi novo prezime"));
-		djelatnik.setUloga(Unos.unesiString(scanner, "Unesi novu ulogu"));
-		djelatnik.setEmail(Unos.unesiString(scanner, "Unesi novi email"));
-		djelatnik.setPlaca(Unos.unesiBigDecimal(scanner, "Unesi novu placu"));
+		djelatnik.setSifra(Unos.unesiInt(scanner, "Unesite novu šifru"));
+		djelatnik.setIme(Unos.unesiString(scanner, "Unesite novo ime"));
+		djelatnik.setPrezime(Unos.unesiString(scanner, "Unesite novo prezime"));
+		djelatnik.setUloga(Unos.unesiString(scanner, "Unesite novu ulogu"));
+		djelatnik.setEmail(Unos.unesiString(scanner, "Unesite novi email"));
+		djelatnik.setPlaca(Unos.unesiBigDecimal(scanner, "Unesite novu placu"));
 		izbornik();
 	}
 
 	private void unos() {
 		djelatnik = new Djelatnik();
-		djelatnik.setIme(Unos.unesiString(scanner, "Unesi ime djelatnika"));
-		djelatnik.setPrezime(Unos.unesiString(scanner, "Unesi prezime djelatnika"));
-		djelatnik.setUloga(Unos.unesiString(scanner, "Unesi uloga koju djelatnik obavlja"));
-		djelatnik.setEmail(Unos.unesiString(scanner, "Unesi email djelatnika"));
-		djelatnik.setPlaca(Unos.unesiBigDecimal(scanner, "Unesi placu djelatnika"));
+		djelatnik.setSifra(Unos.unesiInt(scanner, "Unesite šifru djelatnika"));
+		djelatnik.setIme(Unos.unesiString(scanner, "Unesite ime djelatnika"));
+		djelatnik.setPrezime(Unos.unesiString(scanner, "Unesite prezime djelatnika"));
+		djelatnik.setUloga(Unos.unesiString(scanner, "Unesite uloga koju djelatnik obavlja"));
+		djelatnik.setEmail(Unos.unesiString(scanner, "Unesite email djelatnika"));
+		djelatnik.setPlaca(Unos.unesiBigDecimal(scanner, "Unesite placu djelatnika"));
 		djelatnici.add(djelatnik);
 		izbornik();
 	}
