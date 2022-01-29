@@ -97,7 +97,7 @@ public class StartUsluga {
 		pregledDjelatnik();
 		int a = Unos.unesiInt(scanner, "Izaberite redni broj djelatnika kojega želite");
 		usluga = new Usluga();
-		usluga.setDjelatnik(djelatnici.get(a));
+		usluga.setDjelatnik(djelatnici.get(a-1));
 		usluga.setNaziv(Unos.unesiString(scanner, "Unesite naziv usluge"));
 		usluga.setCijena(Unos.unesiBigDecimal(scanner, "Unesite cijenu usluge"));
 		usluge.add(usluga);

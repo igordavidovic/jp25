@@ -16,6 +16,7 @@ public class StartPosjeta {
 
 	public StartPosjeta() {
 		posjete = new ArrayList<>();
+		korisnici = new ArrayList<>();
 		scanner = new Scanner(System.in);
 		pocetniPodaci();
 		program();
@@ -96,7 +97,7 @@ public class StartPosjeta {
 		pregledKorisnik();
 		int a = Unos.unesiInt(scanner, "Unesite redni broj korisnika kojega želite izabrati");
 		posjeta = new Posjeta();
-		posjeta.setKorisnik(korisnici.get(a));
+		posjeta.setKorisnik(korisnici.get(a-1));
 		posjeta.setDatumPrijave(new Date());
 		posjeta.setDatumOdjave(new Date());
 		posjeta.setBrojSoba(Unos.unesiInt(scanner, "Unesite broj soba kojih želite rezervirati"));
