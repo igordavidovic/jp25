@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.lang.InternalError"/>
-    <fullyQualifiedTypeName name="javax.swing.plaf.synth.SynthOptionPaneUI"/>
-    <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="java.util.concurrent.atomic.AtomicIntegerArray"/>
     <fullyQualifiedTypeName name="javax.print.attribute.standard.JobPrioritySupported"/>
     <fullyQualifiedTypeName name="java.util.Random"/>
@@ -45,19 +41,23 @@
     <fullyQualifiedTypeName name="tablica.GornjiLijeviKut"/>
     <fullyQualifiedTypeName name="tablica.GornjiDesniKut"/>
     <fullyQualifiedTypeName name="java.sql.Date"/>
-    <fullyQualifiedTypeName name="zavrsnirad.startentitet.StartDjelatnik"/>
-    <fullyQualifiedTypeName name="zavrsnirad.entiteti.Korisnik"/>
-    <fullyQualifiedTypeName name="zavrsnirad.startentitet.StartKorisnik"/>
-    <fullyQualifiedTypeName name="zavrsnirad.entiteti.Usluga"/>
     <fullyQualifiedTypeName name="java.math.BigDecimal"/>
-    <fullyQualifiedTypeName name="zavrsnirad.startentitet.StartUsluga"/>
-    <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
-    <fullyQualifiedTypeName name="zavrsnirad.entiteti.Djelatnik"/>
-    <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="zavrsnirad.startentitet.Unos"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="zavrsnirad.entiteti.Posjeta"/>
+    <fullyQualifiedTypeName name="zavrsnirad.entiteti.Korisnik"/>
     <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="zavrsnirad.entiteti.Djelatnik"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="zavrsnirad.entiteti.Usluga"/>
+    <fullyQualifiedTypeName name="zavrsnirad.entiteti.Posjeta_usluga"/>
+    <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
-    <fullyQualifiedTypeName name="zavrsnirad.entiteti.Posjeta"/>
+    <fullyQualifiedTypeName name="zavrsnirad.startentitet.StartDjelatnik"/>
+    <fullyQualifiedTypeName name="zavrsnirad.startentitet.StartKorisnik"/>
+    <fullyQualifiedTypeName name="zavrsnirad.startentitet.StartPosjeta"/>
+    <fullyQualifiedTypeName name="zavrsnirad.startentitet.StartPosjeta_Usluga"/>
+    <fullyQualifiedTypeName name="zavrsnirad.startentitet.StartUsluga"/>
+    <fullyQualifiedTypeName name="zavrsnirad.startentitet.StartProgram"/>
 </qualifiedTypeNameHistroy>
