@@ -1,4 +1,4 @@
-package zavrsnirad.startentitet;
+package zavrsnirad.utility;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -6,11 +6,11 @@ import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 
-import zavrsnirad.entiteti.Djelatnik;
-import zavrsnirad.entiteti.Korisnik;
-import zavrsnirad.entiteti.Posjeta;
-import zavrsnirad.entiteti.Posjeta_usluga;
-import zavrsnirad.entiteti.Usluga;
+import zavrsnirad.model.Djelatnik;
+import zavrsnirad.model.Korisnik;
+import zavrsnirad.model.Posjeta;
+import zavrsnirad.model.Posjeta_usluga;
+import zavrsnirad.model.Usluga;
 
 public class StartPosjeta_Usluga {
 	private List<Posjeta_usluga> posjete_usluge;

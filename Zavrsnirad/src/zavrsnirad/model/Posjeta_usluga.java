@@ -1,4 +1,4 @@
-package zavrsnirad.entiteti;
+package zavrsnirad.model;
 
 public class Posjeta_usluga {
 	private int sifra;

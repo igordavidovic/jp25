@@ -1,4 +1,4 @@
-package zavrsnirad.entiteti;
+package zavrsnirad.model;
 
 import java.util.Date;
 

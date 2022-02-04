@@ -1,12 +1,12 @@
-package zavrsnirad.startentitet;
+package zavrsnirad.utility;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import zavrsnirad.entiteti.Djelatnik;
-import zavrsnirad.entiteti.Usluga;
+import zavrsnirad.model.Djelatnik;
+import zavrsnirad.model.Usluga;
 
 public class StartUsluga {
 	private List<Djelatnik> djelatnici;

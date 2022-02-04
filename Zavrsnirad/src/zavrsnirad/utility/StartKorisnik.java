@@ -1,11 +1,11 @@
-package zavrsnirad.startentitet;
+package zavrsnirad.utility;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 
-import zavrsnirad.entiteti.Korisnik;
+import zavrsnirad.model.Korisnik;
 
 public class StartKorisnik {
 	private List<Korisnik> korisnici;

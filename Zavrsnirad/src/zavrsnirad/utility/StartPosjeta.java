@@ -1,12 +1,12 @@
-package zavrsnirad.startentitet;
+package zavrsnirad.utility;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 
-import zavrsnirad.entiteti.Korisnik;
-import zavrsnirad.entiteti.Posjeta;
+import zavrsnirad.model.Korisnik;
+import zavrsnirad.model.Posjeta;
 
 public class StartPosjeta {
 	private List<Posjeta> posjete;

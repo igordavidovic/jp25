@@ -1,4 +1,4 @@
-package zavrsnirad.startentitet;
+package zavrsnirad.utility;
 
 import java.util.Scanner;
 
