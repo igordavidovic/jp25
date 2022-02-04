@@ -2,8 +2,7 @@ package zavrsnirad.model;
 
 import java.math.BigDecimal;
 
-public class Djelatnik {
-	private int sifra;
+public class Djelatnik extends Entitet{
 	private String ime;
 	private String prezime;
 	private String uloga;
@@ -15,13 +14,15 @@ public class Djelatnik {
 	}
 
 	public Djelatnik(int sifra,String ime, String prezime, String uloga, String email, BigDecimal placa) {
-		this.sifra = sifra;
+		super(sifra);
 		this.ime = ime;
 		this.prezime = prezime;
 		this.uloga = uloga;
 		this.email = email;
 		this.placa = placa;
 	}
+
+
 
 	public String getIme() {
 		return ime;
@@ -65,15 +66,8 @@ public class Djelatnik {
 
 	@Override
 	public String toString() {
-		return new StringBuilder().append(sifra).append("  ").append(ime).append(" ").append(prezime).append("  ").append(uloga).append("  ").append(email).append("  ").append(placa).toString();
+		return new StringBuilder().append(ime).append(" ").append(prezime).toString();
 	}
 
-	public int getSifra() {
-		return sifra;
-	}
-
-	public void setSifra(int sifra) {
-		this.sifra = sifra;
-	}
 
 }
