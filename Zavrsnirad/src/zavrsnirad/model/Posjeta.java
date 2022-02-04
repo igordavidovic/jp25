@@ -1,23 +1,24 @@
 package zavrsnirad.model;
 
 import java.util.Date;
+import java.util.List;
 
-public class Posjeta {
-	private int sifra;
+public class Posjeta extends Entitet {
 	private Korisnik korisnik;
 	private Date datumPrijave;
 	private Date datumOdjave;
 	private int brojSoba;
 	private int brojOdraslih;
 	private int brojDjece;
-
+	private List<Usluga> usluge;
+	
 	public Posjeta() {
 
 	}
 
-	public Posjeta(int sifra,Korisnik korisnik, Date datumPrijave, Date datumOdjave, int brojSoba, int brojOdraslih,
+	public Posjeta(int sifra, Korisnik korisnik, Date datumPrijave, Date datumOdjave, int brojSoba, int brojOdraslih,
 			int brojDjece) {
-		this.sifra = sifra;
+		super(sifra);
 		this.korisnik = korisnik;
 		this.datumPrijave = datumPrijave;
 		this.datumOdjave = datumOdjave;
@@ -74,17 +75,20 @@ public class Posjeta {
 		this.brojDjece = brojDjece;
 	}
 
+	public List<Usluga> getUsluge() {
+		return usluge;
+	}
+
+	public void setUsluge(List<Usluga> usluge) {
+		this.usluge = usluge;
+	}
+
+	
 	@Override
 	public String toString() {
-		return new StringBuilder().append(sifra).append("  ").append(korisnik.getIme()).append(" ").append(korisnik.getPrezime()).append("  ").append(datumPrijave).append("-").append(datumOdjave).append("  ").append(brojSoba).append("  ").append(brojOdraslih).append("  ").append(brojDjece).toString();
+		return new StringBuilder().append(getSifra()).append("  ").append(datumPrijave).append("-").append(datumOdjave)
+				.toString();
 	}
 
-	public int getSifra() {
-		return sifra;
-	}
-
-	public void setSifra(int sifra) {
-		this.sifra = sifra;
-	}
-
+	
 }

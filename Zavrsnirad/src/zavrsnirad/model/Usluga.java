@@ -1,19 +1,20 @@
 package zavrsnirad.model;
 
 import java.math.BigDecimal;
+import java.util.List;
 
-public class Usluga {
-	private int sifra;
+public class Usluga extends Entitet {
 	private Djelatnik djelatnik;
 	private String naziv;
 	private BigDecimal cijena;
+	private List<Posjeta> posjete;
 
 	public Usluga() {
 
 	}
 
-	public Usluga(int sifra,Djelatnik djelatnik, String naziv, BigDecimal cijena) {
-		this.sifra = sifra;
+	public Usluga(int sifra, Djelatnik djelatnik, String naziv, BigDecimal cijena) {
+		super(sifra);
 		this.djelatnik = djelatnik;
 		this.naziv = naziv;
 		this.cijena = cijena;
@@ -43,17 +44,17 @@ public class Usluga {
 		this.cijena = cijena;
 	}
 
+	public List<Posjeta> getPosjete() {
+		return posjete;
+	}
+
+	public void setPosjete(List<Posjeta> posjete) {
+		this.posjete = posjete;
+	}
+
 	@Override
 	public String toString() {
-		return new StringBuilder().append(sifra).append("  ").append(djelatnik.getIme()).append(" ").append(djelatnik.getPrezime()).append("  ").append(naziv).append("  ").append(cijena).toString();
-	}
-
-	public int getSifra() {
-		return sifra;
-	}
-
-	public void setSifra(int sifra) {
-		this.sifra = sifra;
+		return new StringBuilder().append(naziv).append("  ").append(cijena).toString();
 	}
 
 }
