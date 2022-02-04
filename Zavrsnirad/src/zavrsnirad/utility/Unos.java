@@ -7,42 +7,61 @@ public class Unos {
 	public static int unesiInt(Scanner ulaz, String opis) {
 		int i = 0;
 		while (true) {
-			try {
-				System.out.print(opis + ": ");
+			System.out.print(opis + ": ");
+			try {	
 				i = Integer.parseInt(ulaz.nextLine());
-				if (i < 1) {
-					System.out.println("Broj mora biti pozitivan");
-					continue;
-				}
-				return i;
 			} catch (Exception e) {
-				System.out.println("Greška : " + e.getMessage());
+				System.out.println("Unos mora biti broj");
+				continue;
 			}
-
+			if (i < 1) {
+				System.out.println("Broj mora biti pozitivan");
+				continue;
+			}
+			return i;
 		}
 	}
-
+	
+	public static int unesiInt( Scanner ulaz, String opis, int min, int max) {
+		int i=0;
+		while(true) {
+			System.out.print(opis + ": ");
+			try {
+				i = Integer.parseInt(ulaz.nextLine());
+			} catch (Exception e) {
+				System.out.println("Unos mora biti broj");
+				continue;
+			}
+			
+			if(i<min || i>max) {
+				System.out.println("Broj mora biti između " + min + " i " + max);
+				continue;
+			}
+			return i;
+		}
+	}
+	
+	
 	public static BigDecimal unesiBigDecimal(Scanner ulaz, String opis) {
 		BigDecimal i = BigDecimal.ZERO;
 		while (true) {
+			System.out.print(opis + ": ");
 			try {
-				System.out.print(opis + ": ");
 				i = new BigDecimal(ulaz.nextLine());
-				if (i.compareTo(BigDecimal.ONE) < 0) {
-					System.out.println("Broj mora biti pozitivan");
-					continue;
-				}
-				return i;
 			} catch (Exception e) {
-				System.out.println("Greška : " + e.getMessage());
+				System.out.println("Unos mora biti broj");
 			}
+			if (i.compareTo(BigDecimal.ONE) < 0) {
+				System.out.println("Broj mora biti pozitivan");
+				continue;
+			}
+			return i;
 		}
 	}
 
 	public static String unesiString(Scanner ulaz, String opis) {
 		String s = "";
 		while (true) {
-			try {
 				System.out.print(opis + ": ");
 				s = ulaz.nextLine();
 				if (s.length() == 0) {
@@ -50,10 +69,6 @@ public class Unos {
 					continue;
 				}
 				return s;
-			} catch (Exception e) {
-				System.out.println("Greška : " + e.getMessage());
-			}
-
+			} 
 		}
 	}
-}
