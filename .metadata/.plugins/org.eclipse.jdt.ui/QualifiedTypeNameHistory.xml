@@ -1,16 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="vjezbanje.Vjezba01"/>
-    <fullyQualifiedTypeName name="java.lang.Math"/>
-    <fullyQualifiedTypeName name="vjezbanje.Vjezba02"/>
-    <fullyQualifiedTypeName name="vjezbanje.Vjezbanje03"/>
-    <fullyQualifiedTypeName name="vjezbanje.Usluga"/>
-    <fullyQualifiedTypeName name="vjezbanje.Djelatnica"/>
-    <fullyQualifiedTypeName name="vjezbanje.Korisnik"/>
-    <fullyQualifiedTypeName name="vjezbanje.Popravak"/>
-    <fullyQualifiedTypeName name="vjezbanje.Urar"/>
-    <fullyQualifiedTypeName name="vjezbanje.Sat"/>
-    <fullyQualifiedTypeName name="vjezbanje.Vlasnik"/>
     <fullyQualifiedTypeName name="vjezbanje.Vozilo"/>
     <fullyQualifiedTypeName name="vjezbanje.Vozac"/>
     <fullyQualifiedTypeName name="vjezbanje.Putnik"/>
@@ -30,19 +19,13 @@
     <fullyQualifiedTypeName name="tablica.GornjiLijeviKut"/>
     <fullyQualifiedTypeName name="tablica.GornjiDesniKut"/>
     <fullyQualifiedTypeName name="java.sql.Date"/>
-    <fullyQualifiedTypeName name="java.math.BigDecimal"/>
     <fullyQualifiedTypeName name="zavrsnirad.startentitet.Unos"/>
-    <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="zavrsnirad.entiteti.Posjeta"/>
     <fullyQualifiedTypeName name="zavrsnirad.entiteti.Korisnik"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="zavrsnirad.entiteti.Djelatnik"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="zavrsnirad.entiteti.Usluga"/>
     <fullyQualifiedTypeName name="zavrsnirad.entiteti.Posjeta_usluga"/>
     <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="zavrsnirad.startentitet.StartDjelatnik"/>
     <fullyQualifiedTypeName name="zavrsnirad.startentitet.StartKorisnik"/>
     <fullyQualifiedTypeName name="zavrsnirad.startentitet.StartPosjeta"/>
@@ -60,4 +43,21 @@
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
     <fullyQualifiedTypeName name="java.sql.SQLException"/>
     <fullyQualifiedTypeName name="java.lang.ClassNotFoundException"/>
+    <fullyQualifiedTypeName name="zavrsnirad.model.Entitet"/>
+    <fullyQualifiedTypeName name="zavrsnirad.model.Usluga"/>
+    <fullyQualifiedTypeName name="zavrsnirad.utility.Unos"/>
+    <fullyQualifiedTypeName name="zavrsnirad.model.Korisnik"/>
+    <fullyQualifiedTypeName name="zavrsnirad.model.Posjeta"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="zavrsnirad.aplikacija.Start"/>
+    <fullyQualifiedTypeName name="zavrsnirad.model.Djelatnik"/>
+    <fullyQualifiedTypeName name="subota.Zadaci"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="model.Sendvic"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="model.Sastojak"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.math.BigDecimal"/>
 </qualifiedTypeNameHistroy>
