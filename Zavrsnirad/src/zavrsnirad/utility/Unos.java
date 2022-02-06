@@ -50,6 +50,7 @@ public class Unos {
 				i = new BigDecimal(ulaz.nextLine());
 			} catch (Exception e) {
 				System.out.println("Unos mora biti broj");
+				continue;
 			}
 			if (i.compareTo(BigDecimal.ONE) < 0) {
 				System.out.println("Broj mora biti pozitivan");
@@ -77,10 +78,9 @@ public class Unos {
 			while (true) {
 				System.out.println(opis + ": ");
 				s = ulaz.nextLine();
-				s.toUpperCase();
-				if (s == "DA") {
+				if (s.toUpperCase().contentEquals("DA")) {
 					return true;
-				} else if (s == "NE") {
+				} else if (s.toUpperCase().contentEquals("NE")) {
 					return false;
 				} else {
 					System.out.println("Unos mora biti da ili ne");
