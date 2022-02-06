@@ -16,14 +16,16 @@ public class Start {
 	private List<Djelatnik> djelatnici;
 	private List<Usluga> usluge;
 	private List<Usluga> usluge2;
+	private List<Usluga> usluge3;
 	private List<Posjeta> posjete;
 	private List<Posjeta> posjete2;
+	private List<Posjeta> posjete3;
 	private Scanner scanner;
 	private Korisnik korisnik;
 	private Djelatnik djelatnik;
 	private Usluga usluga;
 	private Posjeta posjeta;
-
+	
 	public Start() {
 		korisnici = new ArrayList<>();
 		djelatnici = new ArrayList<>();
@@ -77,8 +79,15 @@ public class Start {
 
 	private void posjetaPromjena() {
 		posjetaIzbornik();
-		int a = Unos.unesiInt(scanner, "Unesite redni broj posjete koju želite mjenjati");
-		posjeta = posjete.get(a-1);
+		while(true) {
+		try {
+			posjeta = posjete.get(Unos.unesiInt(scanner, "Unesite redni broj posjete koju želite mijenjati"));
+		} catch (Exception e) {
+			System.out.println("Greška : " + e.getMessage());
+			continue;
+		}
+		break;
+		}
 		posjeta.setSifra(Unos.unesiInt(scanner, "Unesite novu šifru posjete"));
 		posjeta.setBrojSoba(Unos.unesiInt(scanner,"Unesite novi broj soba posjete"));
 		posjeta.setBrojOdraslih(Unos.unesiInt(scanner, "Unesite novi broj odraslih posjete"));
@@ -87,10 +96,30 @@ public class Start {
 	}
 	private void posjetaUnos() {
 		posjeta = unosPosjeta();
-		boolean izbor = true;
 		usluge2 = new ArrayList<>();
+		boolean izbor = true;
+		int izb;
 		while(izbor != false) {
-			usluga = unosUsluga();
+			izb = Unos.unesiInt(scanner, "Želite li uslugu : \n1. Izabrati s liste \n2. Unijeti novu", 1, 2);
+			if(izb == 1) {
+				uslugaPregled();
+				while(true) {
+				try {
+					usluga = usluge.get(Unos.unesiInt(scanner, "Unesite redni broj usluge koju želite izabrati"));
+				} catch (Exception e) {
+					System.out.println("Greška : " + e.getMessage());
+					continue;
+				}
+				break;
+				}
+				posjete3 = new ArrayList<>();
+				posjete3 = usluga.getPosjete();
+				posjete3.add(posjeta);
+				usluga.setPosjete(posjete3);
+			}else {
+				usluga = unosUsluga();
+				usluge.add(usluga);
+			}
 			usluge2.add(usluga);
 			izbor = Unos.unesiBoolean(scanner, "Želite li unijeti još jednu uslugu");
 		}
@@ -102,8 +131,16 @@ public class Start {
 		posjeta = new Posjeta();
 		posjeta.setSifra(Unos.unesiInt(scanner, "Unesite šifru posjete"));
 		korisnikPregled();
-		posjeta.setKorisnik(
-				korisnici.get(Unos.unesiInt(scanner, "Unesite redni broj korisnika kojega želite izabrati") - 1));
+		while(true) {
+		try {
+			posjeta.setKorisnik(
+					korisnici.get(Unos.unesiInt(scanner, "Unesite redni broj korisnika kojega želite izabrati") - 1));
+		} catch (Exception e) {
+			System.out.println("Greška : " + e.getMessage());
+			continue;
+		}
+			break;
+		}
 		posjeta.setDatumPrijave(new Date());
 		posjeta.setDatumOdjave(new Date());
 		posjeta.setBrojSoba(Unos.unesiInt(scanner, "Unesite broj soba"));
@@ -156,8 +193,22 @@ public class Start {
 		usluga = unosUsluga();
 		posjete2 = new ArrayList<>();
 		boolean izbor = true;
+		int izb;
+		int a;
 		while(izbor != false) {
-			posjeta = unosPosjeta();
+			izb = Unos.unesiInt(scanner, "Želite li posjetu : \n1. Izabrati sa liste \n2. Unijeti novu", 1, 2);
+			if(izb == 1) {
+				posjetaPregled();
+				a = Unos.unesiInt(scanner, "Izaberite redni broj posjete koju želite izabrati");
+				posjeta = posjete.get(a-1);
+				usluge3 = new ArrayList<>();
+				usluge3 = posjeta.getUsluge();
+				usluge3.add(usluga);
+				posjeta.setUsluge(usluge3);
+			}else {
+				posjeta = unosPosjeta();
+				posjete.add(posjeta);
+			}
 			posjete2.add(posjeta);
 			izbor = Unos.unesiBoolean(scanner, "Želite li unijeti još jednu posjetu");
 		}
@@ -169,8 +220,15 @@ public class Start {
 		usluga = new Usluga();
 		usluga.setSifra(Unos.unesiInt(scanner, "Unesite šifru usluge"));
 		djelatnikPregled();
-		int a = Unos.unesiInt(scanner, "Unesite redni broj djelatnika kojega želite izabrati");
-		usluga.setDjelatnik(djelatnici.get(a - 1));
+		while(true) {	
+		try {
+			usluga.setDjelatnik(djelatnici.get(Unos.unesiInt(scanner, "Unesite redni broj djelatnika kojega želite izabrati") - 1));
+		} catch (Exception e) {
+			System.out.println("Greška : " + e.getMessage());
+			continue;
+		}
+		break;
+	}
 		usluga.setNaziv(Unos.unesiString(scanner, "Unesite naziv usluge"));
 		usluga.setCijena(Unos.unesiBigDecimal(scanner, "Unesite cijenu usluge"));
 		return usluga;
