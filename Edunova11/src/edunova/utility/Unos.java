@@ -4,10 +4,10 @@ import java.math.BigDecimal;
 import java.util.Scanner;
 
 public class Unos {
-	
-	public static int unesiInt( Scanner ulaz, String poruka) {
-		int i=0;
-		while(true) {
+
+	public static int unesiInt(Scanner ulaz, String poruka) {
+		int i = 0;
+		while (true) {
 			System.out.print(poruka + ": ");
 			try {
 				i = Integer.parseInt(ulaz.nextLine());
@@ -15,18 +15,18 @@ public class Unos {
 				System.out.println("Unos mora biti broj");
 				continue;
 			}
-			
-			if(i<1) {
+
+			if (i < 1) {
 				System.out.println("Broj mora biti pozitivan");
 				continue;
 			}
 			return i;
 		}
 	}
-	
-	public static int unesiInt( Scanner ulaz, String poruka, int min, int max) {
-		int i=0;
-		while(true) {
+
+	public static int unesiInt(Scanner ulaz, String poruka, int min, int max) {
+		int i = 0;
+		while (true) {
 			System.out.print(poruka + ": ");
 			try {
 				i = Integer.parseInt(ulaz.nextLine());
@@ -34,18 +34,18 @@ public class Unos {
 				System.out.println("Unos mora biti broj");
 				continue;
 			}
-			
-			if(i<min || i>max) {
+
+			if (i < min || i > max) {
 				System.out.println("Broj mora biti između " + min + " i " + max);
 				continue;
 			}
 			return i;
 		}
 	}
-	
-	public static BigDecimal unesiBigDecimal(Scanner ulaz,String poruka) {
-		BigDecimal i=BigDecimal.ZERO;
-		while(true) {
+
+	public static BigDecimal unesiBigDecimal(Scanner ulaz, String poruka) {
+		BigDecimal i = BigDecimal.ZERO;
+		while (true) {
 			System.out.print(poruka + ": ");
 			try {
 				i = new BigDecimal(ulaz.nextLine());
@@ -53,27 +53,42 @@ public class Unos {
 				System.out.println("Unos mora biti broj");
 				continue;
 			}
-			
-			if(i.compareTo(BigDecimal.ONE) < 0) {
+
+			if (i.compareTo(BigDecimal.ONE) < 0) {
 				System.out.println("Broj mora biti pozitivan");
 				continue;
 			}
 			return i;
 		}
 	}
-	
-	
+
 	public static String unesiString(Scanner ulaz, String poruka) {
-		String s="";
-		while(true) {
+		String s = "";
+		while (true) {
 			System.out.print(poruka + ": ");
 			s = ulaz.nextLine();
-			if(s.length()==0) {
-				System.out.println( "Obavezan unos");
+			if (s.length() == 0) {
+				System.out.println("Obavezan unos");
 				continue;
 			}
 			return s;
 		}
 	}
 
+	public static boolean unesiBoolean(Scanner ulaz, String opis) {
+		String s;
+		while (true) {
+			System.out.println(opis + ": ");
+			s = ulaz.nextLine();
+			s.toUpperCase();
+			if (s == "DA") {
+				return true;
+			} else if (s == "NE") {
+				return false;
+			} else {
+				System.out.println("Unos mora biti da ili ne");
+				continue;
+			}
+		}
+	}
 }

@@ -71,4 +71,21 @@ public class Unos {
 				return s;
 			} 
 		}
-	}
+	
+		public static boolean unesiBoolean(Scanner ulaz, String opis) {
+			String s;
+			while (true) {
+				System.out.println(opis + ": ");
+				s = ulaz.nextLine();
+				s.toUpperCase();
+				if (s == "DA") {
+					return true;
+				} else if (s == "NE") {
+					return false;
+				} else {
+					System.out.println("Unos mora biti da ili ne");
+					continue;
+				}
+			}
+		}
+}
