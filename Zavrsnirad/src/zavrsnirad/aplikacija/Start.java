@@ -15,7 +15,9 @@ public class Start {
 	private List<Korisnik> korisnici;
 	private List<Djelatnik> djelatnici;
 	private List<Usluga> usluge;
+	private List<Usluga> usluge2;
 	private List<Posjeta> posjete;
+	private List<Posjeta> posjete2;
 	private Scanner scanner;
 	private Korisnik korisnik;
 	private Djelatnik djelatnik;
@@ -49,10 +51,136 @@ public class Start {
 	}
 
 	private void posjetaIzbornik() {
+		System.out.println("\n1. Pregled posjete");
+		System.out.println("2. Unos nove posjete");
+		System.out.println("3. Promjena posjete");
+		System.out.println("4. Brisanje posjete");
+		System.out.println("5. Povratak na glavni izbornik");
+		switch (Unos.unesiInt(scanner, "Odaberi akciju", 1, 5)) {
+		case 1 -> {
+			posjetaPregled();
+			posjetaIzbornik();
+		}
+		case 2 -> posjetaUnos();
+		case 3 -> posjetaPromjena();
+		case 4 -> posjetaBrisanje();
+		case 5 -> glavniIzbornik();
+		}
+	}
 
+	private void posjetaPregled() {
+		int a = 1;
+		for (Posjeta p : posjete) {
+			System.out.println(a++ + ". " + p);
+		}
+	}
+
+	private void posjetaPromjena() {
+		posjetaIzbornik();
+		int a = Unos.unesiInt(scanner, "Unesite redni broj posjete koju želite mjenjati");
+		posjeta = posjete.get(a-1);
+		posjeta.setSifra(Unos.unesiInt(scanner, "Unesite novu šifru posjete"));
+		posjeta.setBrojSoba(Unos.unesiInt(scanner,"Unesite novi broj soba posjete"));
+		posjeta.setBrojOdraslih(Unos.unesiInt(scanner, "Unesite novi broj odraslih posjete"));
+		posjeta.setBrojDjece(Unos.unesiInt(scanner, "Unesite novi broj djece posjete"));
+		posjetaIzbornik();
+	}
+	private void posjetaUnos() {
+		posjeta = unosPosjeta();
+		boolean izbor = true;
+		usluge2 = new ArrayList<>();
+		while(izbor != false) {
+			usluga = unosUsluga();
+			usluge2.add(usluga);
+			izbor = Unos.unesiBoolean(scanner, "Želite li unijeti još jednu uslugu");
+		}
+		posjeta.setUsluge(usluge2);
+		posjete.add(posjeta);
+		posjetaIzbornik();
+	}
+	private Posjeta unosPosjeta() {
+		posjeta = new Posjeta();
+		posjeta.setSifra(Unos.unesiInt(scanner, "Unesite šifru posjete"));
+		korisnikPregled();
+		posjeta.setKorisnik(
+				korisnici.get(Unos.unesiInt(scanner, "Unesite redni broj korisnika kojega želite izabrati") - 1));
+		posjeta.setDatumPrijave(new Date());
+		posjeta.setDatumOdjave(new Date());
+		posjeta.setBrojSoba(Unos.unesiInt(scanner, "Unesite broj soba"));
+		posjeta.setBrojOdraslih(Unos.unesiInt(scanner, "Unesite broj odraslih"));
+		posjeta.setBrojDjece(Unos.unesiInt(scanner, "Unesite broj djece"));
+		return posjeta;
+	}
+
+	private void posjetaBrisanje() {
+		posjetaPregled();
+		posjete.remove(Unos.unesiInt(scanner, "Unesite redni broj posjete koju želite ukloniti") - 1);
+		posjetaIzbornik();
 	}
 
 	private void uslugaIzbornik() {
+		System.out.println("\n1. Pregled usluge");
+		System.out.println("2. Unos nove usluge");
+		System.out.println("3. Promjena usluge");
+		System.out.println("4. Brisanje usluge");
+		System.out.println("5. Povratak na glavni izbornik");
+		switch (Unos.unesiInt(scanner, "Odaberi akciju", 1, 5)) {
+		case 1 -> {
+			uslugaPregled();
+			uslugaIzbornik();
+		}
+		case 2 -> uslugaUnos();
+		case 3 -> uslugaPromjena();
+		case 4 -> uslugaBrisanje();
+		case 5 -> glavniIzbornik();
+		}
+	}
+
+	private void uslugaBrisanje() {
+		uslugaPregled();
+		usluge.remove(Unos.unesiInt(scanner, "Unesite redni broj usluge koju želite ukloniti"));
+		uslugaIzbornik();
+	}
+
+	private void uslugaPromjena() {
+		uslugaPregled();
+		int a = Unos.unesiInt(scanner, "Unesite redni broj usluge koju želite mjenjati");
+		usluga = usluge.get(a-1);
+		usluga.setSifra(Unos.unesiInt(scanner, "Unesite novu šifru usluge"));
+		usluga.setNaziv(Unos.unesiString(scanner, "Unesite novi naziv usluge"));
+		usluga.setCijena(Unos.unesiBigDecimal(scanner, "Unesite novu cijenu usluge"));
+		uslugaIzbornik();
+	}
+	
+	private void uslugaUnos() {
+		usluga = unosUsluga();
+		posjete2 = new ArrayList<>();
+		boolean izbor = true;
+		while(izbor != false) {
+			posjeta = unosPosjeta();
+			posjete2.add(posjeta);
+			izbor = Unos.unesiBoolean(scanner, "Želite li unijeti još jednu posjetu");
+		}
+		usluga.setPosjete(posjete2);
+		usluge.add(usluga);
+		uslugaIzbornik();
+	}
+	private Usluga unosUsluga() {
+		usluga = new Usluga();
+		usluga.setSifra(Unos.unesiInt(scanner, "Unesite šifru usluge"));
+		djelatnikPregled();
+		int a = Unos.unesiInt(scanner, "Unesite redni broj djelatnika kojega želite izabrati");
+		usluga.setDjelatnik(djelatnici.get(a - 1));
+		usluga.setNaziv(Unos.unesiString(scanner, "Unesite naziv usluge"));
+		usluga.setCijena(Unos.unesiBigDecimal(scanner, "Unesite cijenu usluge"));
+		return usluga;
+	}
+
+	private void uslugaPregled() {
+		int a = 1;
+		for (Usluga u : usluge) {
+			System.out.println(a++ + ". " + u);
+		}
 
 	}
 
@@ -88,7 +216,7 @@ public class Start {
 
 	private void djelatnikBrisanje() {
 		djelatnikPregled();
-		djelatnici.remove(Unos.unesiInt(scanner, "Unesite redni broj djelatnika kojega želite izbristati")-1);
+		djelatnici.remove(Unos.unesiInt(scanner, "Unesite redni broj djelatnika kojega želite izbristati") - 1);
 		djelatnikIzbornik();
 	}
 

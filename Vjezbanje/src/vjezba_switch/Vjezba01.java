@@ -1,5 +1,7 @@
 package vjezba_switch;
 
+import java.util.Scanner;
+
 import javax.swing.JOptionPane;
 
 public class Vjezba01 {
@@ -48,6 +50,23 @@ public class Vjezba01 {
 			System.out.println("Nisi odabrao važeću opciju");
 			break;
 		}
-
+		
+		Scanner opis = new Scanner(System.in); 
+		String s;
+		while (true) {
+			System.out.println(opis + ": ");
+			s = ulaz.nextLine();
+			System.out.println(s);
+			s.toUpperCase();
+			System.out.println(s);
+			if (s.contentEquals("DA")) {
+				return true;
+			} else if (s.contentEquals("NE")) {
+				return false;
+			} else {
+				System.out.println("Unos mora biti da ili ne");
+				continue;
+			}
+		}
 	}
 }
