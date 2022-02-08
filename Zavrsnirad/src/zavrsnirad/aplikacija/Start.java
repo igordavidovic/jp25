@@ -25,7 +25,7 @@ public class Start {
 	private Djelatnik djelatnik;
 	private Usluga usluga;
 	private Posjeta posjeta;
-	
+
 	public Start() {
 		korisnici = new ArrayList<>();
 		djelatnici = new ArrayList<>();
@@ -79,68 +79,49 @@ public class Start {
 
 	private void posjetaPromjena() {
 		posjetaIzbornik();
-		while(true) {
-		try {
-			posjeta = posjete.get(Unos.unesiInt(scanner, "Unesite redni broj posjete koju želite mijenjati"));
-		} catch (Exception e) {
-			System.out.println("Greška : " + e.getMessage());
-			continue;
-		}
-		break;
-		}
+		posjeta = posjete
+				.get(Unos.unesiInt(scanner, "Unesite redni broj posjete koju želite mijenjati", 1, posjete.size()) - 1);
 		posjeta.setSifra(Unos.unesiInt(scanner, "Unesite novu šifru posjete"));
-		posjeta.setBrojSoba(Unos.unesiInt(scanner,"Unesite novi broj soba posjete"));
+		posjeta.setBrojSoba(Unos.unesiInt(scanner, "Unesite novi broj soba posjete"));
 		posjeta.setBrojOdraslih(Unos.unesiInt(scanner, "Unesite novi broj odraslih posjete"));
 		posjeta.setBrojDjece(Unos.unesiInt(scanner, "Unesite novi broj djece posjete"));
 		posjetaIzbornik();
 	}
+
 	private void posjetaUnos() {
 		posjeta = unosPosjeta();
 		usluge2 = new ArrayList<>();
 		boolean izbor = true;
 		int izb;
-		while(izbor != false) {
+		while (izbor != false) {
 			izb = Unos.unesiInt(scanner, "Želite li uslugu : \n1. Izabrati s liste \n2. Unijeti novu", 1, 2);
-			if(izb == 1) {
+			if (izb == 1) {
 				uslugaPregled();
-				while(true) {
-				try {
-					usluga = usluge.get(Unos.unesiInt(scanner, "Unesite redni broj usluge koju želite izabrati"));
-				} catch (Exception e) {
-					System.out.println("Greška : " + e.getMessage());
-					continue;
-				}
-				break;
-				}
+				usluga = usluge.get(
+						Unos.unesiInt(scanner, "Unesite redni broj usluge koju želite izabrati", 1, usluge.size()) - 1);
 				posjete3 = new ArrayList<>();
 				posjete3 = usluga.getPosjete();
 				posjete3.add(posjeta);
 				usluga.setPosjete(posjete3);
-			}else {
+			} else {
 				usluga = unosUsluga();
 				usluge.add(usluga);
 			}
 			usluge2.add(usluga);
-			izbor = Unos.unesiBoolean(scanner, "Želite li unijeti još jednu uslugu");
+			izbor = Unos.unesiBoolean(scanner, "Želite li dodati još jednu uslugu");
 		}
 		posjeta.setUsluge(usluge2);
 		posjete.add(posjeta);
 		posjetaIzbornik();
 	}
+
 	private Posjeta unosPosjeta() {
 		posjeta = new Posjeta();
 		posjeta.setSifra(Unos.unesiInt(scanner, "Unesite šifru posjete"));
 		korisnikPregled();
-		while(true) {
-		try {
-			posjeta.setKorisnik(
-					korisnici.get(Unos.unesiInt(scanner, "Unesite redni broj korisnika kojega želite izabrati") - 1));
-		} catch (Exception e) {
-			System.out.println("Greška : " + e.getMessage());
-			continue;
-		}
-			break;
-		}
+		posjeta.setKorisnik(korisnici
+				.get(Unos.unesiInt(scanner, "Unesite redni broj korisnika kojega želite izabrati", 1, korisnici.size())
+						- 1));
 		posjeta.setDatumPrijave(new Date());
 		posjeta.setDatumOdjave(new Date());
 		posjeta.setBrojSoba(Unos.unesiInt(scanner, "Unesite broj soba"));
@@ -175,37 +156,36 @@ public class Start {
 
 	private void uslugaBrisanje() {
 		uslugaPregled();
-		usluge.remove(Unos.unesiInt(scanner, "Unesite redni broj usluge koju želite ukloniti"));
+		usluge.remove(Unos.unesiInt(scanner, "Unesite redni broj usluge koju želite ukloniti") - 1);
 		uslugaIzbornik();
 	}
 
 	private void uslugaPromjena() {
 		uslugaPregled();
-		int a = Unos.unesiInt(scanner, "Unesite redni broj usluge koju želite mjenjati");
-		usluga = usluge.get(a-1);
+		usluga = usluge.get(Unos.unesiInt(scanner, "Izaberite uslugu koju želite mjenjati", 1, usluge.size()) - 1);
 		usluga.setSifra(Unos.unesiInt(scanner, "Unesite novu šifru usluge"));
 		usluga.setNaziv(Unos.unesiString(scanner, "Unesite novi naziv usluge"));
 		usluga.setCijena(Unos.unesiBigDecimal(scanner, "Unesite novu cijenu usluge"));
 		uslugaIzbornik();
 	}
-	
+
 	private void uslugaUnos() {
 		usluga = unosUsluga();
 		posjete2 = new ArrayList<>();
 		boolean izbor = true;
 		int izb;
-		int a;
-		while(izbor != false) {
+		while (izbor != false) {
 			izb = Unos.unesiInt(scanner, "Želite li posjetu : \n1. Izabrati sa liste \n2. Unijeti novu", 1, 2);
-			if(izb == 1) {
+			if (izb == 1) {
 				posjetaPregled();
-				a = Unos.unesiInt(scanner, "Izaberite redni broj posjete koju želite izabrati");
-				posjeta = posjete.get(a-1);
+				posjeta = posjete.get(
+						Unos.unesiInt(scanner, "Unesite redni broj posjete koju želite izabrati", 1, posjete.size())
+								- 1);
 				usluge3 = new ArrayList<>();
 				usluge3 = posjeta.getUsluge();
 				usluge3.add(usluga);
 				posjeta.setUsluge(usluge3);
-			}else {
+			} else {
 				posjeta = unosPosjeta();
 				posjete.add(posjeta);
 			}
@@ -216,19 +196,14 @@ public class Start {
 		usluge.add(usluga);
 		uslugaIzbornik();
 	}
+
 	private Usluga unosUsluga() {
 		usluga = new Usluga();
 		usluga.setSifra(Unos.unesiInt(scanner, "Unesite šifru usluge"));
 		djelatnikPregled();
-		while(true) {	
-		try {
-			usluga.setDjelatnik(djelatnici.get(Unos.unesiInt(scanner, "Unesite redni broj djelatnika kojega želite izabrati") - 1));
-		} catch (Exception e) {
-			System.out.println("Greška : " + e.getMessage());
-			continue;
-		}
-		break;
-	}
+		usluga.setDjelatnik(djelatnici.get(
+				Unos.unesiInt(scanner, "Unesite redni broj djelatnika kojega želite izabrati", 1, djelatnici.size())
+						- 1));
 		usluga.setNaziv(Unos.unesiString(scanner, "Unesite naziv usluge"));
 		usluga.setCijena(Unos.unesiBigDecimal(scanner, "Unesite cijenu usluge"));
 		return usluga;
@@ -280,8 +255,7 @@ public class Start {
 
 	private void djelatnikPromjena() {
 		djelatnikIzbornik();
-		int a = Unos.unesiInt(scanner, "Unesite redni broj djelatnika kojega želite mjenjati");
-		djelatnik = djelatnici.get(a - 1);
+		djelatnik = djelatnici.get(Unos.unesiInt(scanner, "Unesite redni broj djelatnika kojeg želite mjenjati", 1, djelatnici.size())-1);
 		djelatnik.setSifra(Unos.unesiInt(scanner, "Unesite novu šifru djelatnika"));
 		djelatnik.setIme(Unos.unesiString(scanner, "Unesite novo ime djelatnika"));
 		djelatnik.setPrezime(Unos.unesiString(scanner, "Unesite nov prezime djelatnika"));
@@ -324,8 +298,7 @@ public class Start {
 
 	private void korisnikPromjena() {
 		korisnikPregled();
-		int a = Unos.unesiInt(scanner, "Unesite redni broj korisnika kojega želite mjenjati");
-		korisnik = korisnici.get(a - 1);
+		korisnik = korisnici.get(Unos.unesiInt(scanner, "Unesite redni broj korisnika kojeg želite mjenjati", 1, korisnici.size())-1);
 		korisnik.setSifra(Unos.unesiInt(scanner, "Unesite novu šifru korisnika"));
 		korisnik.setIme(Unos.unesiString(scanner, "Unesite novo ime korisnika"));
 		korisnik.setPrezime(Unos.unesiString(scanner, "Unesite novo prezime korisnika"));
