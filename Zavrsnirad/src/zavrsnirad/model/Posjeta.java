@@ -83,12 +83,6 @@ public class Posjeta extends Entitet {
 		this.usluge = usluge;
 	}
 
-	public void veze() {
-		int a = 1;
-		for(Usluga u : usluge) {
-			System.out.println(a++ + ". " + u);
-		}
-	}
 	
 	@Override
 	public String toString() {
