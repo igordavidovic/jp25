@@ -6,11 +6,11 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Start {
-	
+
 	private List<Mobitel> mobiteli;
 	private Scanner ulaz;
 	private Mobitel mobitel;
-	
+
 	public Start() {
 		mobiteli = new ArrayList<>();
 		ulaz = new Scanner(System.in);
@@ -18,13 +18,12 @@ public class Start {
 		program();
 		ulaz.close();
 	}
-	
+
 	private void pocetniPodaci() {
-		for(int i=0;i<10;i++) {
-			mobiteli.add(new Mobitel(i+1,"M" + (i+1),new BigDecimal(i*1000)));
+		for (int i = 0; i < 10; i++) {
+			mobiteli.add(new Mobitel(i + 1, "M" + (i + 1), new BigDecimal(i * 1000)));
 		}
-		
-		
+
 	}
 
 	private void program() {
@@ -38,47 +37,35 @@ public class Start {
 		System.out.println("3. Brisanje mobitela");
 		System.out.println("4. Pregled mobitela");
 		System.out.println("5. Izlaz iz programa");
-		//DZ staru switch sintaksu preprevati u novu
-		switch (Unos.unesiInt(ulaz, "Odaberite akciju")) {
-		case 1:
-			unos();
-			break;
-		case 2:
-			promjena();
-			break;
-		case 3:
-			brisanje();
-			break;
-		case 4:
+		// DZ staru switch sintaksu preprevati u novu
+		switch (Unos.unesiInt(ulaz, "Izaberite akciju", 1, 5)) {
+		case 1 -> unos();
+		case 2 -> promjena();
+		case 3 -> brisanje();
+		case 4 -> {
 			pregled();
 			izbornik();
-			break;
-		case 5:
-			System.out.println("\nHvala Što ste koristili naš program, doviđenja!");
-			break;
-		default:
-			System.out.println("Nije dobra opcija izbornika");
-			izbornik();
+		}
 		}
 	}
 
 	private void pregled() {
-		int b=1;
-		for(Mobitel m: mobiteli) {
+		int b = 1;
+		for (Mobitel m : mobiteli) {
 			System.out.println(b++ + ". " + m);
 		}
 	}
 
 	private void brisanje() {
 		pregled();
-		mobiteli.remove(Unos.unesiInt(ulaz, "Odaberi redni broj mobitela koji želiš obrisati")-1);
+		mobiteli.remove(Unos.unesiInt(ulaz, "Odaberi redni broj mobitela koji želiš obrisati") - 1);
 		izbornik();
 	}
 
 	private void promjena() {
 		pregled();
 		int i = Unos.unesiInt(ulaz, "Unesi redni broj mobitela kojeg želiš mjenjati");
-		mobitel  = mobiteli.get(i-1);
+		mobitel = mobiteli.get(i - 1);
 		mobitel.setNaziv(Unos.unesiString(ulaz, "Promjeni naziv (" + mobitel.getNaziv() + ")"));
 		// DZ implementirsti promjene šifre i cijene
 		izbornik();

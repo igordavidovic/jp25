@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="vjezbanje.Vozilo"/>
     <fullyQualifiedTypeName name="vjezbanje.Vozac"/>
     <fullyQualifiedTypeName name="vjezbanje.Putnik"/>
     <fullyQualifiedTypeName name="vjezbanje.Voznja"/>
@@ -52,12 +51,13 @@
     <fullyQualifiedTypeName name="model.Sendvic"/>
     <fullyQualifiedTypeName name="model.Sastojak"/>
     <fullyQualifiedTypeName name="java.math.BigDecimal"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="zavrsnirad.model.Usluga"/>
     <fullyQualifiedTypeName name="zavrsnirad.model.Posjeta"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="zavrsnirad.utility.Unos"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.lang.IndexOutOfBoundsException"/>
 </qualifiedTypeNameHistroy>

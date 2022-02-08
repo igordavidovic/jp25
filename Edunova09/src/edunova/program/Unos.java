@@ -18,6 +18,20 @@ public class Unos {
 		}
 	}
 	
+	public static int unesiInt( Scanner ulaz, String poruka,int min,int max) {
+		int i=0;
+		while(true) {
+			System.out.print(poruka + ": ");
+			i = Integer.parseInt(ulaz.nextLine());
+			if(i<min || i > max) {
+				System.out.println("Broj mora biti veći od " + min + " i manji od " + max);
+				continue;
+			}
+			return i;
+		}
+	}
+	
+	
 	public static BigDecimal unesiBigDecimal(Scanner ulaz,String poruka) {
 		BigDecimal i=BigDecimal.ZERO;
 		while(true) {
