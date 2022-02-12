@@ -92,6 +92,10 @@ public class Start {
 			if (izb == 1) {
 				uslugaPregled(posjeta.getUsluge());
 				usluge2 = posjeta.getUsluge();
+				if (usluge2.size() == 0) {
+					System.out.println("Na posjeti se ne nalazi niti jedna usluga tako da nemate što ukloniti!");
+					continue;
+				}
 				usluga = usluge2
 						.get(Unos.unesiInt(scanner, "Unesite redni broj usluge koju želite ukloniti", 1, usluge2.size())
 								- 1);
@@ -101,6 +105,11 @@ public class Start {
 			} else {
 				izb = Unos.unesiInt(scanner, "Želite li uslugu : \n1. Izabrati s liste \n2. Unijeti novu", 1, 2);
 				if (izb == 1) {
+					if (usluge.size() == 0) {
+						System.out
+								.println("Na listi usluga se ne nalazi niti jedna ne možete koristit izabir sa liste!");
+						continue;
+					}
 					uslugaPregled(usluge);
 					usluga = usluge.get(
 							Unos.unesiInt(scanner, "Unesite redni broj usluge koju želite izabrati", 1, usluge.size())
@@ -136,6 +145,10 @@ public class Start {
 			izb = Unos.unesiInt(scanner, "Želite li uslugu : \n1. Izabrati s liste \n2. Unijeti novu", 1, 2);
 			if (izb == 1) {
 				uslugaPregled(usluge);
+				if (usluge.size() == 0) {
+					System.out.println("Na listi usluga se ne nalazi niti jedna ne možete koristit izabir sa liste!");
+					continue;
+				}
 				usluga = usluge.get(
 						Unos.unesiInt(scanner, "Unesite redni broj usluge koju želite izabrati", 1, usluge.size()) - 1);
 				posjete2 = new ArrayList<>();
@@ -161,9 +174,13 @@ public class Start {
 		posjeta = new Posjeta();
 		posjeta.setSifra(Unos.unesiInt(scanner, "Unesite šifru posjete"));
 		korisnikPregled();
-		posjeta.setKorisnik(korisnici
-				.get(Unos.unesiInt(scanner, "Unesite redni broj korisnika kojega želite izabrati", 1, korisnici.size())
-						- 1));
+		if (korisnici.size() == 0) {
+			System.out.println("Na listi korisnika se ne nalazi ni jedan ne možete koristiti izabir s liste!");
+		} else {
+			posjeta.setKorisnik(korisnici.get(
+					Unos.unesiInt(scanner, "Unesite redni broj korisnika kojega želite izabrati", 1, korisnici.size())
+							- 1));
+		}
 		posjeta.setDatumPrijave(new Date());
 		posjeta.setDatumOdjave(new Date());
 		posjeta.setBrojSoba(Unos.unesiInt(scanner, "Unesite broj soba"));
@@ -173,6 +190,9 @@ public class Start {
 	}
 
 	private void posjetaBrisanje() {
+		if(posjete.size() == 0) {
+			System.out.println("U listi posjeta se ne nalazi niti jedna te se nemože brisati");
+		}
 		posjetaPregled(posjete);
 		posjete.remove(Unos.unesiInt(scanner, "Unesite redni broj posjete koju želite ukloniti") - 1);
 		posjetaIzbornik();
@@ -197,6 +217,9 @@ public class Start {
 	}
 
 	private void uslugaBrisanje() {
+		if(usluge.size() == 0) {
+			System.out.println("U listi usluga se ne nalazi niti jedna te se nemože brisati");
+		}
 		uslugaPregled(usluge);
 		usluge.remove(Unos.unesiInt(scanner, "Unesite redni broj usluge koju želite ukloniti") - 1);
 		uslugaIzbornik();
@@ -215,8 +238,12 @@ public class Start {
 			if (izb == 1) {
 				posjetaPregled(usluga.getPosjete());
 				posjete2 = usluga.getPosjete();
-				posjeta = posjete2
-						.get(Unos.unesiInt(scanner, "Unesite redni broj usluge koju želite ukloniti", 1, posjete2.size())
+				if (posjete2.size() == 0) {
+					System.out.println("Na usluzi se ne nalazi niti jedna posjeta tako da nemate što ukloniti!");
+					continue;
+				}
+				posjeta = posjete2.get(
+						Unos.unesiInt(scanner, "Unesite redni broj usluge koju želite ukloniti", 1, posjete2.size())
 								- 1);
 				posjete2.remove(posjeta);
 				usluge2 = posjeta.getUsluge();
@@ -225,6 +252,10 @@ public class Start {
 				izb = Unos.unesiInt(scanner, "Želite li posjetu : \n1. Izabrati s liste \n2. Unijeti novu", 1, 2);
 				if (izb == 1) {
 					posjetaPregled(posjete);
+					if (posjete.size() == 0) {
+						System.out.println("Na listi posjeta se ne nalazi ni jedna ne možete koristiti izabir s liste");
+						continue;
+					}
 					posjeta = posjete.get(
 							Unos.unesiInt(scanner, "Unesite redni broj usluge koju želite izabrati", 1, usluge.size())
 									- 1);
@@ -258,6 +289,10 @@ public class Start {
 			izb = Unos.unesiInt(scanner, "Želite li posjetu : \n1. Izabrati sa liste \n2. Unijeti novu", 1, 2);
 			if (izb == 1) {
 				posjetaPregled(posjete);
+				if (posjete.size() == 0) {
+					System.out.println("Na listi posjeta se ne nalazi ni jedna ne možete koristiti izabir s liste");
+					continue;
+				}
 				posjeta = posjete.get(
 						Unos.unesiInt(scanner, "Unesite redni broj posjete koju želite izabrati", 1, posjete.size())
 								- 1);
@@ -284,9 +319,13 @@ public class Start {
 		usluga = new Usluga();
 		usluga.setSifra(Unos.unesiInt(scanner, "Unesite šifru usluge"));
 		djelatnikPregled();
-		usluga.setDjelatnik(djelatnici.get(
-				Unos.unesiInt(scanner, "Unesite redni broj djelatnika kojega želite izabrati", 1, djelatnici.size())
-						- 1));
+		if (djelatnici.size() == 0) {
+			System.out.println("Na listi djelatnika se ne nalazi niti jedan ne možete koristiti izabir s liste!");
+		} else {
+			usluga.setDjelatnik(djelatnici.get(
+					Unos.unesiInt(scanner, "Unesite redni broj djelatnika kojega želite izabrati", 1, djelatnici.size())
+							- 1));
+		}
 		usluga.setNaziv(Unos.unesiString(scanner, "Unesite naziv usluge"));
 		usluga.setCijena(Unos.unesiBigDecimal(scanner, "Unesite cijenu usluge"));
 		return usluga;
@@ -331,6 +370,9 @@ public class Start {
 	}
 
 	private void djelatnikBrisanje() {
+		if(djelatnici.size() == 0) {
+			System.out.println("U listi djelatnika se ne nalazi niti jedna te se nemože brisati");
+		}
 		djelatnikPregled();
 		djelatnici.remove(Unos.unesiInt(scanner, "Unesite redni broj djelatnika kojega želite izbristati") - 1);
 		djelatnikIzbornik();
@@ -338,6 +380,9 @@ public class Start {
 
 	private void djelatnikPromjena() {
 		djelatnikIzbornik();
+		if(djelatnici.size() == 0) {
+			System.out.println("U listi djelatnika se ne nalazi niti jedna te se nemože mjenjati");
+		}
 		djelatnik = djelatnici
 				.get(Unos.unesiInt(scanner, "Unesite redni broj djelatnika kojeg želite mjenjati", 1, djelatnici.size())
 						- 1);
@@ -376,6 +421,9 @@ public class Start {
 	}
 
 	private void korisnikBrisanje() {
+		if(korisnici.size() == 0) {
+			System.out.println("U listi korisnika se ne nalazi niti jedna te se nemože brisati");
+		}
 		korisnikPregled();
 		korisnici.remove(Unos.unesiInt(scanner, "Unesite redni broj korisnika kojega želite izbrisati") - 1);
 		korisnikIzbornik();
@@ -383,6 +431,9 @@ public class Start {
 
 	private void korisnikPromjena() {
 		korisnikPregled();
+		if(korisnici.size() == 0) {
+			System.out.println("U listi korisnika se ne nalazi niti jedna te se nemože mjenjati");
+		}
 		korisnik = korisnici.get(
 				Unos.unesiInt(scanner, "Unesite redni broj korisnika kojeg želite mjenjati", 1, korisnici.size()) - 1);
 		korisnik.setSifra(Unos.unesiInt(scanner, "Unesite novu šifru korisnika"));
