@@ -7,7 +7,6 @@ public class Usluga extends Entitet {
 	private Djelatnik djelatnik;
 	private String naziv;
 	private BigDecimal cijena;
-	private List<Posjeta> posjete;
 
 	public Usluga() {
 
@@ -42,14 +41,6 @@ public class Usluga extends Entitet {
 
 	public void setCijena(BigDecimal cijena) {
 		this.cijena = cijena;
-	}
-
-	public List<Posjeta> getPosjete() {
-		return posjete;
-	}
-
-	public void setPosjete(List<Posjeta> posjete) {
-		this.posjete = posjete;
 	}
 
 	@Override
